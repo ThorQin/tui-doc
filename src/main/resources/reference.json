@@ -1,0 +1,36 @@
+{
+  "name": "参考手册",
+  "desc": "本手册描述了 tui.js 开发过程中用到的模块、类、方法、属性、事件、全局方法等。",
+  "index": true,
+  "content": [
+    {
+      "id": "module",
+      "name": "模块",
+      "index": true,
+      "content": [
+        {
+          "id": "core",
+          "name": "核心模块",
+          "desc": "核心模块提供了公共方法供用户和内部使用。",
+          "index": true
+        },
+        {
+          "id": "ui",
+          "name": "界面控件",
+          "desc": "本模块提供了丰富的界面控件。",
+          "index": true
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "name": "UI控件类",
+      "index": true
+    },
+    {
+      "id": "utilitis",
+      "name": "工具类",
+      "index": true
+    }
+  ]
+}
