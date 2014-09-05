@@ -1,4 +1,4 @@
-﻿var downloadMenu = [
+var downloadMenu = [
 	{ link: 'download/tui-project.zip', value: '下载工程源码' },
 	{ link: 'download/tui-release.zip', value: '下载开发包', icon:'fa-download' }];
 
@@ -7,7 +7,7 @@ var detailItemMenu = [
 	{ key: "moveDown", value: "下移" ,icon:"fa-arrow-down" },
 	{ value: "-" },
 	{ key: "delete", value: "删除条目", icon: "fa-trash-o" }
-]
+];
 
 var docTableCol = [
 	{ name: "名称", key: 0, width: 80, _important: true, format: tui.ctrl.Grid.textEditor() },
@@ -37,7 +37,7 @@ var docTableCol = [
 			
 			
 		}),	width: 32, fixed:true
-	},
+	}
 ];
 
 function setupCatalogSize() {

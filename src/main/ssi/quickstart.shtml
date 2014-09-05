@@ -13,8 +13,8 @@
 				 src="assets/image/logo.png" />
 		</a>
 		<a id="btnHome" class="tui-radiobox" href="./" data-group="navGroup"><i class="fa fa-home"></i> 首页</a>
-		<a id="btnQuickStart" class="tui-radiobox" href="quickstart.html" data-group="navGroup">快速上手</a>
-		<a id="btnReference" class="tui-radiobox" data-checked="true" href="#" data-group="navGroup">开发手册</a>
+		<a id="btnQuickStart" class="tui-radiobox" data-checked="true" href="#" data-group="navGroup">快速上手</a>
+		<a id="btnReference" class="tui-radiobox" href="reference.shtml" data-group="navGroup">开发手册</a>
 		<a class="tui-button" data-menu="downloadMenu"><i class="fa fa-download"></i> 下载</a>
 		<div id="forkme"><a href="https://github.com/">View On GitHub</a> <i class="fa fa-github" style="font-size:20px"></i></div>
 	</div>
@@ -26,7 +26,7 @@
 		<script>
 			docmaker = new doc.DocMaker(tui.ctrl.accordionGroup("docIndex"), "docContent");
 			tui.ctrl.accordionGroup("docIndex").installMonitor(window);
-			tui.loadURL("api/content?file=reference.json", function (status, xhr) {
+			tui.loadURL("api/content?file=quickstart.json", function (status, xhr) {
 				if (status === "success") {
 					docmaker.make(eval("(" + xhr.responseText + ")"));
 				}
