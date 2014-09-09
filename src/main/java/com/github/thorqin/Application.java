@@ -10,6 +10,9 @@ import com.github.thorqin.webapi.annotation.UseSecurity;
 public class Application extends WebApplication {
 	@Override
 	public void onStartup() {
+		String dataDir = System.getenv().get("OPENSHIFT_DATA_DIR");
+		if (dataDir != null)
+			setDataPath(dataDir);
 		System.out.println("Application startupped.");
 	}
 
