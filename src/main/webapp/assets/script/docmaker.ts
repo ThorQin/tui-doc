@@ -1,4 +1,4 @@
-﻿module doc {
+module doc {
 	var tableType = {
 		'param': ['参数', '类型', '描述'],
 		'ret': ['返回值', '类型', '描述'],
