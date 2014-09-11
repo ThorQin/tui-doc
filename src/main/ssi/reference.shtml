@@ -16,7 +16,7 @@
 		<a id="btnQuickStart" class="tui-radiobox" href="quickstart.shtml" data-group="navGroup">快速上手</a>
 		<a id="btnReference" class="tui-radiobox" data-checked="true" href="#" data-group="navGroup">开发手册</a>
 		<a class="tui-button" data-menu="downloadMenu"><i class="fa fa-download"></i> 下载</a>
-		<div id="forkme"><a href="https://github.com/">View On GitHub</a> <i class="fa fa-github" style="font-size:20px"></i></div>
+		<div id="forkme"><a href="https://github.com/ThorQin/tui">View On GitHub</a> <i class="fa fa-github" style="font-size:20px"></i></div>
 	</div>
 	<div id="mainContent">
 		<div id="docIndex" class="tui-accordion-group index"
