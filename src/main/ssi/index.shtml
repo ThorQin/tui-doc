@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
 <head>
 	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>TUI.JS</title>
 	<%@include file="common-include.ssi"%>
 	<style>
@@ -220,7 +221,7 @@ tui.msgbox(str("This is a test"));
 					<img src="assets/image/browser.png" style="width:400px"/>
 				</td>
 				<td>
-					<h1>夸浏览器支持</h1>
+					<h1>跨浏览器支持</h1>
 					tui.js 兼容世面上常见的各种浏览器，IE最低支持到IE8，如果有需要也可以支持到IE7。
 				</td>
 			</tr>

@@ -42,7 +42,10 @@ var docTableCol = [
 
 function setupCatalogSize() {
 	var size = tui.windowSize();
-	var g = document.getElementById("docIndex")._ctrl;
+	var docIndex = document.getElementById("docIndex");
+	if (!docIndex)
+		return;
+	var g = docIndex._ctrl;
 	if (g instanceof tui.ctrl.AccordionGroup)
 		g.maxHeight(size.height - 240);
 	else if (g) {
