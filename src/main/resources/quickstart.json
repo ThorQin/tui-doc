@@ -1,1 +1,214 @@
-{"name":"快速上手","index":true,"content":[{"id":"firstProject","name":"创建 tui.js 工程","desc":"tui.js 是一个独立的 Javascript UI 框架，使用 tui.js 只要简单的下载开发包并加入你的 web 工程即可，tui.js 一开始就是为了纯静态页面而设计的，不需要后台服务器开发也可以工作的很好，当然如果需要后台数据交互的话，那么无论何种服务器开发语言都可创建支撑 tui.js 的后端服务器。","index":true,"content":[{"id":"createProjectManually","name":"手工创建web工程","desc":"请跟随如下步骤来创建一个web工程并包含对 tui.js 的引用。","index":true,"content":[{"id":"downloadSDK","name":"下载开发包","index":true,"desc":"在 tui.js 的项目主页下载开发用的分发包：\u003ca href=\"download/tui-release.zip\"\u003e下载\u003c/a\u003e\n\u003cbr\u003e\ntui.js依赖 font-awesome-4.2.0 和 jQuery-1.11.1，\n为了使用方便，压缩包中已经包括了这些资源，解压缩到您的web 工程中的 js 目录（可以根据自己需要随意命名）。"},{"id":"referJS","name":"引入脚本和CSS","index":true,"code":"\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n  \u003chead\u003e\n    \u003clink rel=\"stylesheet\" href=\"js/font-awesome-4.2.0/css/font-awesome.min.css\" type=\"text/css\" /\u003e\n    \u003clink rel=\"stylesheet\" href=\"js/tui/css/tui.min.css\" type=\"text/css\" /\u003e\n    \u003cscript src=\"js/jquery-1.11.1.min.js\"\u003e\u003c/script\u003e\n    \u003cscript src=\"js/tui/tui.all.min.js\"\u003e\u003c/script\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e\n    ....\n  \u003c/body\u003e\n\u003c/html\u003e","desc":"在HEAD头中加入如下连接即可引用 tui.js，其中 font-awesome 和 jquery 是 tui.js 依赖的库，一个是流行的字体库，一个是著名的Javascript基础框架。如果您正在使用某种服务器端程序进行开发，那么可以把下面这几行代码放到一个公共的包含文件中，今后在所有用到 tui.js 的页面中进行包含就可以了。"}]},{"id":"createWebAPI","name":"创建 WebAPI 工程","desc":"如果您是 java web 开发人员，那么想要使用 tui.js，最简单的是使用 WebAPI 框架来进行开发，WebAPI 是一个开源的轻量级的 java 服务器开发框架，内置集成了 tui.js 作为前端 UI 库，它的设计理念就是希望使用静态 HTML + 服务器API 来代替传统的 asp，jsp, php 页面的开发方式，由于传统的开发方式把服务器代码和客户端代码都写在一起，无论是理解和维护都比较困难，随着客户端 javascript 的增强和 HTML5的进步，未来的开发方式会更多的采用静态页面+服务器API的方式进行开发，这种方式由于减轻了服务器生成动态页面的负担，也使得服务器并发能力得到增强。","index":true,"content":[{"id":"MavenCmd","name":"使用 Maven 创建 WebAPI 工程","desc":"WebAPI 使用 Maven 管理项目，并自带了 Maven 的原型工程模板，WebAPI 目前还处在开发阶段，暂时只有 SNAPSHOT 的版本，您首先需要下载并配置一个可用的 Maven。然后使用如下指令并根据提示来完成 WebAPI 工程的创建：","index":true,"code":"mvn archetype:generate \n  -DarchetypeCatalog=https://oss.sonatype.org/content/groups/public/\n  -DarchetypeGroupId=webapi-suit.thorqin.github.com\n  -DarchetypeArtifactId=webapi-archetype"},{"id":"devByWebAPI","name":"使用 WebAPI 框架进行开发","desc":"WebAPI 工程创建成功后，会生成默认的项目结构，其中 tui.js 位于 web 资源目录（src/main/webapp/assets/script）中，你可以在 webapp 目录中添加静态页面，也可以利用 WebAPI 提供的服务器包含页面（Server Side Include, .ssi, .shtml）来进行开发，SSI 页面默认位于 resources/ssi 目录中，.shtml 页面是最终会生成 html 的页面，而 .ssi 文件为碎片文件，只能被包含于别的文件中，在生成的原型工程中，默认提供了一个 common-include.ssi 文件，这个文件中已经包含了所有 tui.js 需要引用的项目，以后在其它页面中只要包含 common-include.ssi 这个文件就可以了。下面的代码演示了如何使用 SSI 包含：","code":"......\n\u003chead\u003e\n  \u003cmeta charset=\"utf-8\"\u003e\n  \u003ctitle\u003eDemo\u003c/title\u003e\n  \u003c%@include file=\"common-include.ssi\"%\u003e\n\u003c/head\u003e\n......","index":true},{"id":"helloWorldByWebapi","name":"WebAPI 版的 HelloWorld","desc":"使用 WebAPI 生成的原型工程实现了一个使用 tui.js 和后台代码进行交互显示当前时间的 HelloWorld 程序。其中前台代码中使用了 tui form 控件来向后台发起请求并解析返回内容，虽然代码不多，但是演示了前后台交互的基本方式，关于 WebAPI 的使用方法，会在后面的章节中陆续介绍一些，但是详细的情况请参考 WebAPI 的文档。","index":true}]}]}]}
+{
+  "name": "快速上手",
+  "index": true,
+  "content": [
+    {
+      "id": "firstProject",
+      "name": "创建 tui.js 工程",
+      "desc": "tui.js 是一个独立的 Javascript UI 框架，使用 tui.js 只要简单的下载开发包并加入你的 web 工程即可，tui.js 一开始就是为了纯静态页面而设计的，不需要后台服务器开发也可以工作的很好，当然如果需要后台数据交互的话，那么无论何种服务器开发语言都可创建支撑 tui.js 的后端服务器。",
+      "index": true,
+      "content": [
+        {
+          "id": "createProjectManually",
+          "name": "手工创建web工程",
+          "desc": "请跟随如下步骤来创建一个web工程并包含对 tui.js 的引用。",
+          "index": true,
+          "content": [
+            {
+              "id": "downloadSDK",
+              "name": "下载开发包",
+              "index": true,
+              "desc": "在 tui.js 的项目主页下载开发用的分发包：\u003ca href\u003d\"https://github.com/ThorQin/tui/releases/download/v1.0/tui-1.0.zip\"\u003e下载\u003c/a\u003e\n\u003cbr\u003e\ntui.js依赖 font-awesome-4.2.0 和 jQuery-1.11.1，\n为了使用方便，压缩包中已经包括了这些资源，解压缩到您的web 工程中的 js 目录（可以根据自己需要随意命名）。"
+            },
+            {
+              "id": "referJS",
+              "name": "引入脚本和CSS",
+              "index": true,
+              "code": "\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n  \u003chead\u003e\n    \u003clink rel\u003d\"stylesheet\" href\u003d\"js/font-awesome-4.2.0/css/font-awesome.min.css\" type\u003d\"text/css\" /\u003e\n    \u003clink rel\u003d\"stylesheet\" href\u003d\"js/tui/css/tui.min.css\" type\u003d\"text/css\" /\u003e\n    \u003cscript src\u003d\"js/jquery-1.11.1.min.js\"\u003e\u003c/script\u003e\n    \u003cscript src\u003d\"js/tui/tui.all.min.js\"\u003e\u003c/script\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e\n    ....\n  \u003c/body\u003e\n\u003c/html\u003e",
+              "desc": "在HEAD头中加入如下连接即可引用 tui.js，其中 font-awesome 和 jquery 是 tui.js 依赖的库，一个是流行的字体库，一个是著名的Javascript基础框架。如果您正在使用某种服务器端程序进行开发，那么可以把下面这几行代码放到一个公共的包含文件中，今后在所有用到 tui.js 的页面中进行包含就可以了。"
+            }
+          ]
+        },
+        {
+          "id": "createWebAPI",
+          "name": "创建 WebAPI 工程",
+          "desc": "如果您是 java web 开发人员，那么想要使用 tui.js，最简单的是使用 WebAPI 框架来进行开发，WebAPI 是一个开源的轻量级的 java 服务器开发框架，内置集成了 tui.js 作为前端 UI 库，它的设计理念就是希望使用静态 HTML + 服务器API 来代替传统的 asp，jsp, php 页面的开发方式，由于传统的开发方式把服务器代码和客户端代码都写在一起，无论是理解和维护都比较困难，随着客户端 javascript 的增强和 HTML5的进步，未来的开发方式会更多的采用静态页面+服务器API的方式进行开发，这种方式由于减轻了服务器生成动态页面的负担，也使得服务器并发能力得到增强。",
+          "index": true,
+          "content": [
+            {
+              "id": "MavenCmd",
+              "name": "使用 Maven 创建 WebAPI 工程",
+              "desc": "WebAPI 使用 Maven 管理项目，并自带了 Maven 的原型工程模板，WebAPI 目前还处在开发阶段，暂时只有 SNAPSHOT 的版本，您首先需要下载并配置一个可用的 Maven。然后使用如下指令并根据提示来完成 WebAPI 工程的创建：",
+              "index": true,
+              "code": "mvn archetype:generate \n  -DarchetypeCatalog\u003dhttps://oss.sonatype.org/content/groups/public/\n  -DarchetypeGroupId\u003dcom.github.thorqin.webapi-suit\n  -DarchetypeArtifactId\u003dwebapi-archetype"
+            },
+            {
+              "id": "devByWebAPI",
+              "name": "使用 WebAPI 框架进行开发",
+              "desc": "WebAPI 工程创建成功后，会生成默认的项目结构，其中 tui.js 位于 web 资源目录（src/main/webapp/assets/script）中，你可以在 webapp 目录中添加静态页面，也可以利用 WebAPI 提供的服务器包含页面（Server Side Include, .ssi, .shtml）来进行开发，SSI 页面默认位于 src/main/ssi 目录中，.shtml 页面是最终会生成 html 的页面，而 .ssi 文件为碎片文件，只能被包含于别的文件中，在生成的原型工程中，默认提供了一个 common-include.ssi 文件，这个文件中已经包含了所有 tui.js 需要引用的项目，以后在其它页面中只要包含 common-include.ssi 这个文件就可以了。下面的代码演示了如何使用 SSI 包含：",
+              "code": "......\n\u003chead\u003e\n  \u003cmeta charset\u003d\"utf-8\"\u003e\n  \u003ctitle\u003eDemo\u003c/title\u003e\n  \u003c%@include file\u003d\"common-include.ssi\"%\u003e\n\u003c/head\u003e\n......",
+              "index": true
+            },
+            {
+              "id": "helloWorldByWebapi",
+              "name": "WebAPI 版的 HelloWorld",
+              "desc": "使用 WebAPI 生成的原型工程实现了一个使用 tui.js 和后台代码进行交互显示当前时间的 HelloWorld 程序。其中前台代码中使用了 tui form 控件来向后台发起请求并解析返回内容，虽然代码不多，但是演示了前后台交互的基本方式，关于 WebAPI 的使用方法，会在后面的章节中陆续介绍一些，但是详细的情况请参考 WebAPI 的文档。",
+              "index": true
+            },
+            {
+              "id": "compileAndRun",
+              "name": "编译和运行",
+              "desc": "用原型创建的 WebAPI 工程已经集成了 Jetty 插件的配置，在命令行中执行：mvn package jetty:run 就可以对工程编译打包，并运行该 web 工程，同时，工程还自带了 netbeans 和 eclipse 中对 maven goals 的配置，执行相应的 goal 就可以启动 jetty 服务运行或调试项目了，如果您使用的是 IntelliJ IDEA 那么执行 Maven goals 本身就更加简单，不需要再多做配置了。",
+              "index": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tuiControls",
+      "name": "控件介绍",
+      "desc": "本章描述了 tui.js 最为常用的控件，web 页面开发尤其是企业应用，由于业务量较大，非常需要一些好用的控件来减少工作量，提高开发效率，tui.js 提供的控件覆盖了常见需求，对于一般的企业应用基本可以只使用 tui.js 来完成全部的开发工作。",
+      "index": true,
+      "content": [
+        {
+          "id": "buttons",
+          "name": "按钮",
+          "desc": "Web 开发最常用的可能就是按钮控件了，仅仅使用风格统一而漂亮的按钮，就可以让网站的用户体验整体提高一个层次。tui.js 提供了默认的按钮风格，同时也可以通过定制 CSS 来控制按钮的外观，按钮控件提供了一系列的方法、属性、和事件来使得开发者更容易的使用它。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看按钮的外观：\u003cdiv style\u003d\"padding:10px\"\u003e\u003ca class\u003d\"tui-button\"\u003e按钮\u003c/a\u003e \u003ca class\u003d\"tui-button tui-primary\"\u003e重要\u003c/a\u003e \u003ca class\u003d\"tui-button tui-success\"\u003e成功\u003c/a\u003e \u003ca class\u003d\"tui-button tui-warning\"\u003e警告\u003c/a\u003e \u003ca class\u003d\"tui-button tui-danger\"\u003e危险\u003c/a\u003e \u003ca class\u003d\"tui-button\" data-disabled\u003d\"true\"\u003e禁用\u003c/a\u003e\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "addButton",
+              "name": "通过HTML标签来添加按钮",
+              "desc": "除了对话框、弹出层、提示条等控件外，所有的有形控件都可以通过在标签上添加 css class 来完成初始化，比如对于按钮来说，我们可以通过在 span、a、div、input、button 等标签上添加 class\u003d\"tui-button\" 来完成控件的初始化。不过由于浏览器的限制，用不同的标签来作为按钮的载体可能会得到不同的外观，这点需要注意，所以为了达到风格的统一和跨浏览器的一致性，我强烈建议只使用一种标签作为按钮的载体，比如使用 a 标签，tui 内部都使用 a 标签作为按钮载体。我们来看看初始化按钮的代码：",
+              "code": "\u003ca class\u003d\"tui-button\"\u003e按钮\u003c/a\u003e\n\u003ca class\u003d\"tui-button tui-primary\"\u003e重要\u003c/a\u003e\n\u003ca class\u003d\"tui-button tui-success\"\u003e成功\u003c/a\u003e\n\u003ca class\u003d\"tui-button tui-warning\"\u003e警告\u003c/a\u003e\n\u003ca class\u003d\"tui-button tui-danger\"\u003e危险\u003c/a\u003e\n\u003ca class\u003d\"tui-button\" data-disabled\u003d\"true\"\u003e禁用\u003c/a\u003e",
+              "index": false
+            },
+            {
+              "id": "addButtonByJs",
+              "name": "通过 Javascript 创建按钮",
+              "desc": "tui.js 的控件全部都可以通过 Javascript 脚本来创建，即便你在页面上不写一个 HTML 标签，你都可以创建漂亮的基于 tui.js 的 web 页面。通过脚本来创建控件，可以使你获得更大的灵活性，更强的控制能力。下面的代码创建了一个按钮，绑定了一个事件，并把按钮加入到页面的 body 中（注意：通过代码刚刚创建的控件是没有加入页面的 DOM 树中的，需要开发者自己决定要把控件摆放到何处）。",
+              "code": "var btn \u003d tui.ctrl.button();\nbtn.text(\"按钮\");\nbtn.on(\"click\", function(data){\n\ttui.msgbox(\"按钮被点击\");\n});\ndocument.body.appendChild(btn[0]);",
+              "index": false
+            },
+            {
+              "id": "buttonMenu",
+              "name": "按钮菜单",
+              "desc": "按钮还有一些高级特性，比如可以为按钮添加一个弹出菜单，这可能是非常常见的用法，弹出菜单支持两种形式，一个是菜单模式，一个是选项列表模式，所谓菜单模式就是弹出菜单只作为发起事件的来源使用，而选项列表模式可以通过列表的内容更新按钮的内容或别的控件的内容。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看，他们的外观：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e菜单模式：\n\u003ca class\u003d\"tui-button\" data-menu\u003d\"[{key:1, value:\u0027菜单项1\u0027},{key:2,value:\u0027菜单项2\u0027},{key:3, value:\u0027菜单项3\u0027}]\"\u003e按钮菜单\u003c/a\u003e 选项模式： \u003ca class\u003d\"tui-button\" data-value\u003d\"\u00271\u0027\" data-data\u003d\"[{key:\u00271\u0027,value:\u0027选项1\u0027},{key:\u00272\u0027,value:\u0027选项2\u0027},{key:\u00273\u0027,value:\u0027选项3\u0027}]\"\u003e选项1\u003c/a\u003e\n\u003c/div\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 对于选项模式，典型的使用场景可能是这样的：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e\u003cspan class\u003d\"tui-input-group tui-inline\"\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入注册资金\"\u003e\u003c/span\u003e\u003ca class\u003d\"tui-button\" data-data\u003d\"[{key:\u0027CNY\u0027,value:\u0027人民币\u0027},{key:\u0027USD\u0027,value:\u0027美元\u0027},{key:\u0027EUR\u0027,value:\u0027欧元\u0027}]\" data-value\u003d\"\u0027CNY\u0027\"\u003e人民币\u003c/a\u003e\u003c/span\u003e\u003c/div\u003e",
+              "index": false,
+              "code": "// 菜单按钮\n\u003ca class\u003d\"tui-button\" data-menu\u003d\"[{key:1, value:\u0027菜单项1\u0027},{key:2,value:\u0027菜单项2\u0027},{key:3, value:\u0027菜单项3\u0027}]\"\u003e按钮菜单\u003c/a\u003e\n// 选项按钮\n\u003ca class\u003d\"tui-button\" data-value\u003d\"\u00271\u0027\" data-data\u003d\"[{key:\u00271\u0027,value:\u0027选项1\u0027},{key:\u00272\u0027,value:\u0027选项2\u0027},{key:\u00273\u0027,value:\u0027选项3\u0027}]\"\u003e选项1\u003c/a\u003e"
+            },
+            {
+              "id": "buttonEvents",
+              "name": "按钮的事件响应",
+              "desc": "页面上的按钮，最重要的就是捕获点击的事件并处理，tui.js 提供了两种捕获按钮事件的方式，一是绑定事件处理函数到按钮对象上，二是绑定全局事件处理函数。在 tui.js 中，所有控件都是继承自 tui.ctrl.Control 对象，而 Control 对象继承自 EventObject 对象，EventObject 对象，提供了一组方法用来捕获对象事件，我们一般使用 on 方法来捕获，off 方法来释放捕获，在前面用 Javascript 创建按钮的章节中我们已经演示了一个绑定到按钮本身的事件处理过程。on 方法接受两个参数，第一是事件名称，第二个是处理函数，事件名称可以是多个（用空格分开），事件处理函数接收一个对象参数，该参数封装了所有事件可用的信息。而绑定全局事件处理函数则更为简单，在 tui.js 中所有按钮、单选、复选等控件，只要自身存在 ID 属性，则都会在 click 的时候触发一个全局事件，事件的名称就是控件 ID，于是我们只要绑定该 ID 就可以捕获到对应控件的 click 事件了（更多的事件处理的详情请看手册），示例代码如下：",
+              "code": "\u003ca id\u003d\"testBtn\" class\u003d\"tui-button\"\u003e按钮\u003c/a\u003e\n\u003cscript\u003e\n// 绑定一个全局事件，捕获 testBtn 的 click 事件\ntui.on(\"testBtn\", function(data){\n\ttui.msgbox(\"点击了按钮\");\n});\n\u003c/script\u003e",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "checkbox",
+          "name": "单选框、复选框",
+          "desc": "和按钮类似，单选框和复选框也是常用的控件，之所以连单选框和复选框都要重新定义一遍，是因为各个浏览器对单选框和复选框的绘制都不一样，有时对齐方式的奇特表现都会对页面排版造成影响，使得页面有失美观。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 我们来看看 tui.js 的单选和复选框外观：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca class\u003d\"tui-checkbox\"\u003e复选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-checkbox\"\u003e复选框2\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox\" data-group\u003d\"g1\"\u003e单选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox\" data-group\u003d\"g1\"\u003e单选框2\u003c/a\u003e\n\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "createCheckbox",
+              "name": "通过HTML标签创建选框",
+              "desc": "和按钮类似，直接看代码：",
+              "code": "\u003ca class\u003d\"tui-checkbox\"\u003e这是复选框\u003c/a\u003e\n// 组名相同的单选框会自动切换选中状态\n\u003ca class\u003d\"tui-radiobox\" data-group\u003d\"g1\"\u003e这是单选框\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox\" data-group\u003d\"g1\"\u003e这是单选框\u003c/a\u003e",
+              "index": false
+            },
+            {
+              "id": "createCheckboxByJs",
+              "name": "通过 Javascript 创建选框",
+              "desc": "和按钮类似，直接看代码：",
+              "code": "var chk \u003d tui.ctrl.checkbox();\nchk.text(\"复选框\");\nvar rdo \u003d tui.ctrl.radiobox();\nrdo.text(\"单选框\");\ndocument.body.appendChild(chk[0]);\ndocument.body.appendChild(rdo[0]);",
+              "index": false
+            },
+            {
+              "id": "checkboxStyle",
+              "name": "定制单选框的显示风格",
+              "desc": "其实任何 tui.js 控件都是可以定制风格的，但由于单选框的用途很多，通过修改单选框的风格可以展示很多特殊的设计，我们举例来说明如何改变单选框的外观。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 首先看两个内置的风格：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\"\u003e选框2\u003c/a\u003e\n\u003ca style\u003d\"margin-left:20px;\" class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\"\u003e选框2\u003c/a\u003e\n\u003c/div\u003e\n通过观察代码，我们可以看到，改变风格就是为控件添加额外的 CSS 样式，这样我们只要根据现有的样式定义，有针对的修改，覆盖掉不需要的属性，添加新的属性，就可以制作出不同的风格出来。这个原则适用于任何控件，注意一点，您设计的CSS类定义需要定义在 tui.min.css 的链接之后，这样才会让您的类定义拥有比 tui.js 自带的类定义拥有更高的优先权。",
+              "index": false,
+              "code": "\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\"\u003e选框2\u003c/a\u003e\n\u003ca style\u003d\"margin-left:20px;\" class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\"\u003e选框2\u003c/a\u003e"
+            }
+          ]
+        },
+        {
+          "id": "tooltip",
+          "name": "工具提示",
+          "desc": "工具提示就是鼠标移动到某个对象上的时候出现的浮动提示框，工具提示的用处很多，它有可能出现在任何地方，所以工具提示的设计和其他控件不同，它本身并没有被赋予一个独立的标签作为宿主，而是作为所有标签的属性存在，也就是说不管什么标签，只要拥有 data-tooltip 属性，就会在鼠标移动到它上面的时候出现 data-tooltip 设定的文字提示。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\u0027fa fa-lightbulb-o\u0027\u003e\u003c/i\u003e 看看它的效果：\n\u003cdiv style\u003d\"padding:10px;color:#666;\"\u003e\n这是一段普通文字，鼠标移动到\u003cspan style\u003d\"font-weight:bold;color:#000;\" data-tooltip\u003d\"\u003ci class\u003d\u0027fa fa-lightbulb-o\u0027\u003e\u003c/i\u003e 鼠标移动到这里的提示...\"\u003e这里\u003c/span\u003e就可以看见提示...\u003cbr\u003e\u003cbr\u003e\n\u003ca class\u003d\"tui-button tui-primary\" data-tooltip\u003d\"这是一个按钮\"\u003e按钮上的提示\u003c/a\u003e\n\u003c/div\u003e\n和别控件不同，由于工具提示是依附于其它对象的，所以它无法用 Javascript 来创建，只能用 Javascript 来控制一些它的行为而已，下面的代码用来加入一个工具提示，注意，您可以把 data-tooltip 属性加入任何标签中：",
+          "index": true,
+          "code": "... \u003cspan style\u003d\"font-weight:bold;\" data-tooltip\u003d\"\u003ci class\u003d\u0027fa fa-lightbulb-o\u0027\u003e\u003c/i\u003e 鼠标移动到这里的提示...\"\u003e这里\u003c/span\u003e ...",
+          "content": [
+            {
+              "id": "mouseFollow",
+              "name": "启用鼠标跟随",
+              "desc": "有时鼠标在某个控件内进行移动的时候，需要让工具提示跟随鼠标一起移动，这样可以获得更好的用户体验，此时，启用工具提示的鼠标跟随模式即可。在加入工具提示的标签上加入 data-cursor-tooltip\u003d\"true\" 则可以开启鼠标跟随模式。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看它的效果：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv data-tooltip\u003d\"鼠标跟随的提示\" data-cursor-tooltip\u003d\"true\" class\u003d\"tui-panel\" style\u003d\"height:80px;text-align:center;line-height:80px\"\u003e鼠标跟随的提示\u003c/div\u003e\n\u003c/div\u003e\n固定的文字看起来没有什么意义，但是配合上 Javascript 的使用，我们可以让跟随文字动态改变，比如显示鼠标位置，或者其他一些动态信息等。",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "tips",
+          "name": "提示条",
+          "desc": "不要搞混提示条控件和工具提示控件，工具提示是需要鼠标动作来触发的浮动提示，而提示条控件一般来说都是固定摆放在页面中的某个位置，当用户执行某操作符合某个条件后就显示出来用来告知用户操作结果等信息。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看它的外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-tips\"\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 这是一个提示信息\u003c/div\u003e\u003cbr\u003e\n\u003cdiv class\u003d\"tui-tips tui-success\"\u003e\u003ci class\u003d\"fa fa-check\"\u003e\u003c/i\u003e 这是一个成功提示信息\u003c/div\u003e\u003cbr\u003e\n\u003cdiv class\u003d\"tui-tips tui-warning\"\u003e\u003ci class\u003d\"fa fa-warning\"\u003e\u003c/i\u003e 这是一个警告提示信息\u003c/div\u003e\u003cbr\u003e\n\u003cdiv class\u003d\"tui-tips tui-error\"\u003e\u003ci class\u003d\"fa fa-times-circle\"\u003e\u003c/i\u003e 这是一个错误提示信息\u003c/div\u003e\n\u003c/div\u003e\n提示信息可以灵活的自己选择合理的摆放位置，当我们已经阅读过这个提示信息后，可以通过点击右侧的叉子来关闭提示。",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHtml",
+              "name": "通过HTML标签创建",
+              "index": false,
+              "code": "\u003cdiv class\u003d\"tui-tips\"\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 这是一个提示信息\u003c/div\u003e\u003cbr\u003e\n\u003cdiv class\u003d\"tui-tips tui-success\"\u003e\u003ci class\u003d\"fa fa-check\"\u003e\u003c/i\u003e 这是一个成功提示信息\u003c/div\u003e\u003cbr\u003e\n\u003cdiv class\u003d\"tui-tips tui-warning\"\u003e\u003ci class\u003d\"fa fa-warning\"\u003e\u003c/i\u003e 这是一个警告提示信息\u003c/div\u003e\u003cbr\u003e\n\u003cdiv class\u003d\"tui-tips tui-error\"\u003e\u003ci class\u003d\"fa fa-times-circle\"\u003e\u003c/i\u003e 这是一个错误提示信息\u003c/div\u003e",
+              "desc": "下面的代码中后三种提示条都使用了不同的颜色风格。"
+            },
+            {
+              "id": "createByJs",
+              "name": "通过 Javascript 创建",
+              "code": "var tips \u003d tui.ctrl.tips();\ndocument.body.appendChild(tips[0]);\ntips.autoCloseTime(2000); // 两秒后自动关闭\ntips.show(\"这是一个提示条\");",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "calendar",
+          "name": "日历控件",
+          "desc": "日历控件设计的比较简单，提供了用户选择日期的功能。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看它的外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cspan class\u003d\"tui-calendar\"\u003e\u003c/span\u003e\n\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHtml",
+              "name": "通过HTML标签创建",
+              "code": "\u003cspan class\u003d\"tui-calendar\"\u003e\u003c/span\u003e",
+              "index": false
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript脚本创建",
+              "code": "var cal \u003d tuil.ctrl.calendar();\ndocument.appendChild(cal[0]);",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "popup",
+          "name": "弹出层和弹出菜单",
+          "desc": "弹出层和弹出菜单也是比较特殊的控件，它们同样无法直接使用标签来创建，而只能通过 javascript 来创建并控制使用，从设计上来说，弹出菜单是直接继承自弹出层的，区别是弹出菜单使用一组数据定义来设计其中的菜单项，而弹出层中可以放置任何内容，由于它们非常相似，这里我只演示弹出菜单。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看个使用的例子：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca id\u003d\"btnMenuDemo\" class\u003d\"tui-button\" data-menu\u003d\"[\n        {key:1, value:\u0027菜单项1\u0027},\n        {value:\u0027-\u0027},\n        {key:2, value:\u0027菜单项2\u0027, children: [\n          {key:11, value:\u0027子项1\u0027},\n          {value:\u0027-\u0027},\n          {key:22, value:\u0027子项2\u0027, checked:true},\n          {key:33, value:\u0027子项3\u0027, icon:\u0027fa-user\u0027}\n        ]},\n        {key:3, value:\u0027菜单项3\u0027}\n      ]\"\u003e弹出菜单\u003c/a\u003e\n\u003c/div\u003e\n好吧，我骗了你，这是一个按钮菜单，不过这是因为按钮天生集成了弹出菜单，所以我没必要再写一段脚本了。什么？你想要看到如何用脚本来生成菜单，好吧，我会给你提供一个代码范例的。",
+          "index": true,
+          "content": [
+            {
+              "id": "createByJs",
+              "name": "用脚本创建和弹出一个菜单",
+              "desc": "对 tui.js 来说脚本是一等公民，能用标签实现的东西，没道理用脚本不可以实现。即便是 tooltip 这种控件，没有提供用脚本创建的接口，但我们也可以通过脚本给目标控件增加 data-tooltip 属性，所以用脚本还是可以干所有的事情。菜单的内容，主要由 JSON 数据段的定义来决定，菜单要求传入一个数组，数组的每个元素都是一个对象，对象必须拥有 value 属性，而 key，icon, checked, link, children 等属性是可选的。key 表示元素的ID，在事件处理中，可以通过这个属性来判断点击的目标，checked 属性描述了这个菜单项是否是选中状态的，link 表示点击这个菜单会导致页面跳转到对应的地址，二children属性则描述了本菜单的子菜单数组，菜单可以一级一级嵌套，没有限制。value 属性如果为 \"-\" 则表示这是一个分隔符。下面来看代码：",
+              "code": "var menuData \u003d [\n  {key: 1, value: \"菜单项1\"},\n  {key: 2, value: \"菜单项2\"},\n  {value: \"-\"},\n  {key: 3, value: \"菜单项3\", children: [\n    {key: 4, value: \"子菜单项1\"},\n    {key: 5, value: \"子菜单项2\"}\n  ]}\n];\nvar m \u003d tui.ctrl.menu(menuData);\nm.show(\"somButtonId\");\n// or m.show(someButton);\n// or m.show(someButton, \"rB\");\n// Second parameter means popup alignment position",
+              "index": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "desc": "本文档初步介绍 tui.js 的使用方法，以及展示内置的一些常用控件，由于这个网站完全都是用 tui.js 开发的，所以查看网站页面的源码也是快速了解 tui.js 的有效方式。"
+}

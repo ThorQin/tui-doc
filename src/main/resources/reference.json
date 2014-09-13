@@ -4,33 +4,1126 @@
   "index": true,
   "content": [
     {
-      "id": "module",
-      "name": "模块",
+      "id": "e_core",
+      "name": "tui",
       "index": true,
+      "const": [
+        [
+          "KEY_BACK",
+          "",
+          ""
+        ],
+        [
+          "KEY_TAB",
+          "",
+          ""
+        ],
+        [
+          "KEY_ENTER",
+          "",
+          ""
+        ],
+        [
+          "KEY_SHIFT",
+          "",
+          ""
+        ],
+        [
+          "KEY_CTRL",
+          "",
+          ""
+        ],
+        [
+          "KEY_ALT",
+          "",
+          ""
+        ],
+        [
+          "KEY_PAUSE",
+          "",
+          ""
+        ],
+        [
+          "KEY_CAPS",
+          "",
+          ""
+        ],
+        [
+          "KEY_ESC",
+          "",
+          ""
+        ],
+        [
+          "KEY_SPACE",
+          "",
+          ""
+        ],
+        [
+          "KEY_PRIOR",
+          "",
+          ""
+        ],
+        [
+          "KEY_NEXT",
+          "",
+          ""
+        ],
+        [
+          "KEY_END",
+          "",
+          ""
+        ],
+        [
+          "KEY_HOME",
+          "",
+          ""
+        ],
+        [
+          "KEY_LEFT",
+          "",
+          ""
+        ],
+        [
+          "KEY_UP",
+          "",
+          ""
+        ],
+        [
+          "KEY_RIGHT",
+          "",
+          ""
+        ],
+        [
+          "KEY_DOWN",
+          "",
+          ""
+        ],
+        [
+          "KEY_PRINT",
+          "",
+          ""
+        ],
+        [
+          "KEY_INSERT",
+          "",
+          ""
+        ],
+        [
+          "KEY_DELETE",
+          "",
+          ""
+        ],
+        [
+          "CONTROL_KEYS",
+          "",
+          ""
+        ],
+        [
+          "undef",
+          "string",
+          ""
+        ],
+        [
+          "undefVal",
+          "string",
+          ""
+        ],
+        [
+          "lang",
+          "string",
+          ""
+        ],
+        [
+          "_eventObject",
+          "EventObject",
+          ""
+        ],
+        [
+          "uuid",
+          "",
+          ""
+        ],
+        [
+          "ieVer",
+          "",
+          ""
+        ],
+        [
+          "ffVer",
+          "",
+          ""
+        ]
+      ],
+      "desc": "核心模块提供了公共方法供用户和内部使用。",
       "content": [
         {
-          "id": "core",
-          "name": "核心模块",
-          "desc": "核心模块提供了公共方法供用户和内部使用。",
-          "index": true
+          "id": "class",
+          "name": "类",
+          "index": false,
+          "content": [
+            {
+              "id": "EventObject",
+              "name": "EventObject对象",
+              "index": true,
+              "content": [
+                {
+                  "param": [
+                    [
+                      "eventName",
+                      "string",
+                      ""
+                    ],
+                    [
+                      "handler",
+                      "EventHandler",
+                      ""
+                    ],
+                    [
+                      "priority",
+                      "boolean",
+                      ""
+                    ]
+                  ],
+                  "id": "bind",
+                  "name": "bind(eventName: string, handler: EventHandler, priority: boolean)",
+                  "index": false
+                },
+                {
+                  "param": [
+                    [
+                      "eventName",
+                      "string",
+                      ""
+                    ],
+                    [
+                      "handler",
+                      "EventHandler",
+                      ""
+                    ]
+                  ],
+                  "id": "unbind",
+                  "name": "unbind(eventName: string, handler: EventHandler)",
+                  "index": false
+                },
+                {
+                  "param": [
+                    [
+                      "eventName",
+                      "string",
+                      ""
+                    ],
+                    [
+                      "callback",
+                      "EventHandler",
+                      ""
+                    ],
+                    [
+                      "priority",
+                      "boolean",
+                      "boolean \u003d false"
+                    ]
+                  ],
+                  "id": "on",
+                  "name": "on(eventName: string, callback: EventHandler, priority: boolean \u003d false)",
+                  "index": false
+                },
+                {
+                  "param": [
+                    [
+                      "eventName",
+                      "string",
+                      ""
+                    ],
+                    [
+                      "callback",
+                      "EventHandler",
+                      ""
+                    ],
+                    [
+                      "priority",
+                      "boolean",
+                      "boolean \u003d false"
+                    ]
+                  ],
+                  "id": "once",
+                  "name": "once(eventName: string, callback: EventHandler, priority: boolean \u003d false)",
+                  "index": false
+                },
+                {
+                  "param": [
+                    [
+                      "eventName",
+                      "string",
+                      ""
+                    ],
+                    [
+                      "callback",
+                      "EventHandler",
+                      ""
+                    ]
+                  ],
+                  "id": "off",
+                  "name": "off(eventName: string, callback?: EventHandler)",
+                  "index": false
+                },
+                {
+                  "param": [
+                    [
+                      "eventName",
+                      "string",
+                      ""
+                    ],
+                    [
+                      "data",
+                      "object",
+                      ""
+                    ]
+                  ],
+                  "id": "fire",
+                  "name": "fire(eventName: string, data?: {})",
+                  "index": false
+                }
+              ]
+            }
+          ]
         },
         {
-          "id": "ui",
-          "name": "界面控件",
-          "desc": "本模块提供了丰富的界面控件。",
-          "index": true
+          "id": "function",
+          "name": "模块方法",
+          "index": true,
+          "content": [
+            {
+              "param": [
+                [
+                  "lang",
+                  "string",
+                  ""
+                ],
+                [
+                  "dict",
+                  "",
+                  ""
+                ]
+              ],
+              "id": "registerTranslator",
+              "name": "registerTranslator(lang: string, dict: {})",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "lang",
+                  "string",
+                  ""
+                ],
+                [
+                  "func",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "registertranslator",
+              "name": "registerTranslator(lang: string, func: (str: string) \u003d\u003e string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "str",
+                  "string",
+                  ""
+                ],
+                [
+                  "lang",
+                  "string",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "str",
+              "name": "str(str: string, lang?: string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "eventName",
+                  "string",
+                  ""
+                ],
+                [
+                  "callback",
+                  "EventHandler",
+                  ""
+                ],
+                [
+                  "priority",
+                  "boolean",
+                  "boolean \u003d false"
+                ]
+              ],
+              "id": "on",
+              "name": "on(eventName: string, callback: EventHandler, priority: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "eventName",
+                  "string",
+                  ""
+                ],
+                [
+                  "callback",
+                  "EventHandler",
+                  ""
+                ],
+                [
+                  "priority",
+                  "boolean",
+                  "boolean \u003d false"
+                ]
+              ],
+              "id": "once",
+              "name": "once(eventName: string, callback: EventHandler, priority: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "eventName",
+                  "string",
+                  ""
+                ],
+                [
+                  "callback",
+                  "EventHandler",
+                  ""
+                ]
+              ],
+              "id": "off",
+              "name": "off(eventName: string, callback?: EventHandler)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "eventName",
+                  "string",
+                  ""
+                ],
+                [
+                  "data",
+                  "object",
+                  ""
+                ]
+              ],
+              "id": "fire",
+              "name": "fire(eventName: string, data?: {})",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "参数",
+                  "string",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "parseBoolean",
+              "name": "parseBoolean(string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "html",
+                  "string",
+                  ""
+                ],
+                [
+                  "withParent",
+                  "boolean",
+                  "boolean \u003d false"
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "Node",
+                  ""
+                ]
+              ],
+              "id": "toElement",
+              "name": "toElement (html: string, withParent: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "node",
+                  "Node",
+                  ""
+                ]
+              ],
+              "id": "removeNode",
+              "name": "removeNode(node: Node)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "",
+                  ""
+                ],
+                [
+                  "text",
+                  "",
+                  ""
+                ]
+              ],
+              "id": "elementText",
+              "name": "elementText(elem, text?)",
+              "index": false,
+              "ret": [
+                [
+                  "返回值",
+                  "string",
+                  ""
+                ]
+              ]
+            },
+            {
+              "param": [
+                [
+                  "srcObj",
+                  "HTMLElement",
+                  ""
+                ],
+                [
+                  "offsetParent",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "id": "relativePosition",
+              "name": "relativePosition(srcObj: HTMLElement, offsetParent: HTMLElement)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "target",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "{ x: number; y: number; }",
+                  ""
+                ]
+              ],
+              "id": "fixedPosition",
+              "name": "fixedPosition(target: HTMLElement)",
+              "index": false
+            },
+            {
+              "id": "debugElementPosition",
+              "name": "debugElementPosition(target: HTMLElement)",
+              "index": false,
+              "param": [
+                [
+                  "target",
+                  "HTMLElement",
+                  ""
+                ]
+              ]
+            },
+            {
+              "id": "debugelementPosition",
+              "name": "debugElementPosition(target: string)",
+              "index": false,
+              "param": [
+                [
+                  "target",
+                  "string",
+                  ""
+                ]
+              ]
+            },
+            {
+              "ret": [
+                [
+                  "返回值",
+                  "{ width: number; height: number }",
+                  ""
+                ]
+              ],
+              "id": "windowSize",
+              "name": "windowSize()",
+              "index": false
+            },
+            {
+              "id": "gettopbody",
+              "name": "getTopBody ()",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "MSScriptHost",
+                  ""
+                ]
+              ],
+              "id": "getWindow",
+              "name": "getWindow(elem: HTMLElement)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "obj",
+                  "",
+                  ""
+                ],
+                [
+                  "excludeProperties",
+                  "any",
+                  ""
+                ]
+              ],
+              "id": "clone",
+              "name": "clone(obj, excludeProperties?: any)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "参数",
+                  "e",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "isLButton",
+              "name": "isLButton(e)",
+              "index": false
+            },
+            {
+              "id": "banBackspace",
+              "name": "banBackspace()",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "Node",
+                  ""
+                ],
+                [
+                  "parent",
+                  "Node",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "isAncestry",
+              "name": "isAncestry(elem: Node, parent: Node)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "Node",
+                  ""
+                ],
+                [
+                  "child",
+                  "Node",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "isPosterity",
+              "name": "isPosterity(elem: Node, child: Node)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "Node",
+                  ""
+                ],
+                [
+                  "event",
+                  "any",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "isFireInside",
+              "name": "isFireInside(elem: Node, event: any)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "isInDoc",
+              "name": "isInDoc(elem: HTMLElement)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "token",
+                  "string",
+                  ""
+                ],
+                [
+                  "params",
+                  "",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "format",
+              "name": "format(token: string, ...params)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "v",
+                  "number",
+                  ""
+                ],
+                [
+                  "min",
+                  "number",
+                  ""
+                ],
+                [
+                  "max",
+                  "number",
+                  ""
+                ],
+                [
+                  "alignLeft",
+                  "boolean",
+                  "boolean \u003d false"
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "paddingNumber",
+              "name": "paddingNumber(v: number, min: number, max?: number, alignLeft: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "url",
+                  "string",
+                  ""
+                ],
+                [
+                  "key",
+                  "string",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "getParam",
+              "name": "getParam(url: string, key: string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "url",
+                  "string",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "getAnchor",
+              "name": "getAnchor(url: string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "target",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "BackupedScrollPosition",
+                  ""
+                ]
+              ],
+              "id": "backupScrollPosition",
+              "name": "backupScrollPosition(target: HTMLElement)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "target",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "id": "focusWithoutScroll",
+              "name": "focusWithoutScroll(target: HTMLElement)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "elem",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "id": "scrollToElement",
+              "name": "scrollToElement(elem: HTMLElement)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "name",
+                  "string",
+                  ""
+                ],
+                [
+                  "value",
+                  "any",
+                  ""
+                ],
+                [
+                  "expires",
+                  "number",
+                  ""
+                ],
+                [
+                  "path",
+                  "string",
+                  ""
+                ],
+                [
+                  "domain",
+                  "string",
+                  ""
+                ],
+                [
+                  "secure",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "saveCookie",
+              "name": "saveCookie (name: string, value: any, expires?: number, path?: string, domain?: string, secure: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "id": "loadcookie",
+              "name": "loadCookie (name: string)",
+              "index": false,
+              "param": [
+                [
+                  "name",
+                  "string",
+                  ""
+                ]
+              ]
+            },
+            {
+              "param": [
+                [
+                  "name",
+                  "string",
+                  ""
+                ],
+                [
+                  "path",
+                  "string",
+                  ""
+                ],
+                [
+                  "domainc",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "deletecookie",
+              "name": "deleteCookie (name: string, path?: string, domain?: string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "key",
+                  "string",
+                  ""
+                ],
+                [
+                  "value",
+                  "any",
+                  ""
+                ],
+                [
+                  "sessionOnly",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "saveData",
+              "name": "saveData (key: string, value: any, sessionOnly: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "key",
+                  "string",
+                  ""
+                ],
+                [
+                  "sessionOnly",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "ret": [
+                [
+                  "返回值",
+                  "any",
+                  ""
+                ]
+              ],
+              "id": "loadData",
+              "name": "loadData (key: string, sessionOnly: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "key",
+                  "string",
+                  ""
+                ],
+                [
+                  "sessionOnly",
+                  "boolean",
+                  ""
+                ]
+              ],
+              "id": "deleteData",
+              "name": "deleteData (key: string, sessionOnly: boolean \u003d false)",
+              "index": false
+            },
+            {
+              "ret": [
+                [
+                  "返回值",
+                  "HTMLElement",
+                  ""
+                ]
+              ],
+              "id": "windowScrollElement",
+              "name": "windowScrollElement()",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "url",
+                  "string",
+                  ""
+                ],
+                [
+                  "completeCallback",
+                  "function",
+                  ""
+                ],
+                [
+                  "async",
+                  "boolean",
+                  ""
+                ],
+                [
+                  "method",
+                  "string",
+                  ""
+                ],
+                [
+                  "data",
+                  "any",
+                  ""
+                ]
+              ],
+              "id": "loadURL",
+              "name": "loadURL(url: string, completeCallback: (status: string, jqXHR: JQueryXHR) \u003d\u003e any, async: boolean \u003d true, method?: string, data?: any)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "e",
+                  "JQueryKeyEventObject",
+                  ""
+                ]
+              ],
+              "id": "accelerate",
+              "name": "accelerate(e)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "key",
+                  "string",
+                  ""
+                ],
+                [
+                  "actionId",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "addAccelerate",
+              "name": "addAccelerate(key: string, actionId: string)",
+              "index": false
+            },
+            {
+              "param": [
+                [
+                  "key",
+                  "string",
+                  ""
+                ],
+                [
+                  "actionId",
+                  "string",
+                  ""
+                ]
+              ],
+              "id": "deleteAccelerate",
+              "name": "deleteAccelerate(key: string, actionId: string)",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "interface",
+          "name": "接口",
+          "index": true,
+          "content": [
+            {
+              "id": "EventHandler",
+              "name": "EventHandler",
+              "index": false
+            }
+          ]
         }
       ]
     },
     {
       "id": "control",
-      "name": "UI控件类",
-      "index": true
-    },
-    {
-      "id": "utilitis",
-      "name": "工具类",
-      "index": true
+      "name": "tui.ctrl",
+      "index": true,
+      "desc": "test content"
     }
   ]
 }
