@@ -154,7 +154,7 @@
 <body>
 	<div class="tui-navbar tui-shadow-dark-big">
 		<a href="../">
-			<img style="vertical-align:middle;margin-left:40px;margin-right:80px;"
+			<img style="border:none;vertical-align:middle;margin-left:40px;margin-right:80px;"
 					src="../assets/image/logo.png" />
 		</a>
 		<a class="tui-button" data-menu="docList"><i class="fa fa-edit"></i> 编辑</a>

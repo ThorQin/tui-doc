@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tui</groupId>
 	<artifactId>tui</artifactId>
@@ -116,6 +116,9 @@
 				<version>9.2.2.v20140723</version>
 				<configuration>
 					<webAppSourceDirectory>${project.build.directory}/${project.build.finalName}</webAppSourceDirectory>
+					<scanTargets>
+						<scanTarget>src/main/ssi</scanTarget>
+					</scanTargets>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 				</configuration>
 			</plugin>
@@ -124,11 +127,11 @@
 	<profiles>
 		<profile>
 			<!-- When built in OpenShift the 'openshift' profile will be used when 
-				invoking mvn. -->
+			invoking mvn. -->
 			<!-- Use this profile for any OpenShift specific customization your app 
-				will need. -->
+			will need. -->
 			<!-- By default that is to put the resulting archive into the 'webapps' 
-				folder. -->
+			folder. -->
 			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
 			<id>openshift</id>
 			<build>

@@ -11,36 +11,41 @@
 			background-image: url(assets/image/dispBack.png);
 			background-repeat: repeat-x;
 			position: relative;
-			padding-top: 200px;
-			padding-bottom: 80px;
+			height: 400px;
 			min-width: 960px;
 		}
 
 		#dispTitle {
 			position: absolute;
-			top: 70px;
+			top: 230px;
 			left: 80px;
 			font-family: Arial;
 			font-size: 40px;
 			font-weight: bold;
 			color: white;
+			filter:alpha(opacity=50);
+			opacity: 0.5;
 		}
 
-		#dispHtml5 {
+		#win {
 			position: absolute;
-			background-image: url(assets/image/html5.png);
-			width: 155px;
-			height: 83px;
+			background-image: url(assets/image/win.png);
+			width:693px;
+			height:333px;
 			top: 40px;
 			right: 80px;
 		}
 
-		#dispBrowser {
+		#tuijs {
+			position: absolute;
+			left: 140px;
+			top:80px;
 			display: block;
 			margin: 0 auto;
-			background-image: url(assets/image/browser.png);
-			width: 800px;
-			height: 158px;
+			background-image: url(assets/image/tuijs.png);
+			background-repeat: no-repeat;
+			width: 280px;
+			height: 65px;
 		}
 
 		#featureTable {
@@ -101,7 +106,7 @@
 <body>
 	<div class="tui-navbar tui-shadow-dark-big">
 		<a href="./">
-			<img style="vertical-align:middle;margin-left:40px;margin-right:80px;"
+			<img style="border:none;vertical-align:middle;margin-left:40px;margin-right:80px;"
 				 src="assets/image/logo.png" />
 		</a>
 		<a id="btnHome" class="tui-radiobox" data-checked="true" href="#" data-group="navGroup" ><i class="fa fa-home"></i> 首页</a>
@@ -112,9 +117,9 @@
 	</div>
 	<div id="mainContent">
 		<div id="dispBoard">
-			<span id="dispTitle">A Lightweight UI Framework</span>
-			<span id="dispHtml5"></span>
-			<span id="dispBrowser"></span>
+			<span id="win"></span>
+			<span id="dispTitle">A Lightweight Javascript<br>UI Framework</span>
+			<span id="tuijs"></span>
 		</div>
 		<table id="featureTable" border="0" cellpadding="0" cellspacing="0">
 			<tr>
