@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<html lang="zh-cn">
 <head>
 	<meta charset="utf-8" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -30,6 +30,7 @@
 		#win {
 			position: absolute;
 			background-image: url(assets/image/win.png);
+			background-repeat: no-repeat;
 			width:693px;
 			height:333px;
 			top: 40px;
@@ -46,6 +47,42 @@
 			background-repeat: no-repeat;
 			width: 280px;
 			height: 65px;
+		}
+		
+		@media (max-width:1300px) {
+			#dispBoard {
+				height: 340px;
+				min-width: 960px;
+			}
+			#dispTitle {
+				top: 180px;
+				left: 60px;
+				font-size: 32px;
+			}
+			
+			#win {
+				width:500px;
+				height:240px;
+				-moz-background-size: 500px;
+				-webkit-background-size: 500px;
+				-o-background-size: 500px;
+				-ms-background-size: 500px;
+				background-size: 500px;
+				right: 40px;
+				top:50px;
+			}
+			
+			#tuijs {
+				left: 80px;
+				top:70px;
+				width: 200px;
+				height: 49px;
+				-moz-background-size: 200px;
+				-webkit-background-size: 200px;
+				-o-background-size: 200px;
+				-ms-background-size: 200px;
+				background-size: 200px;
+			}
 		}
 
 		#featureTable {
