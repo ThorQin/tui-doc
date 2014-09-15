@@ -274,8 +274,8 @@ var doc;
 						var child = item.content[i];
 						var childDiv = document.createElement("div");
 						childDiv.className = "doc-container doc-level-" + (level + 1);
-						_this.makeItem(child, i, item, level + 1, childDiv);
 						container.appendChild(childDiv);
+						_this.makeItem(child, i, item, level + 1, childDiv);
 					}
 				}
 				tui.ctrl.initCtrls(container);
