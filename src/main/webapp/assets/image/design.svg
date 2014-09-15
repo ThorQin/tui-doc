@@ -90,9 +90,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="420.5798"
-     inkscape:cy="-45.450556"
+     inkscape:zoom="1"
+     inkscape:cx="372.04724"
+     inkscape:cy="175.4121"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -523,7 +523,7 @@
          style="font-size:22px">Home</tspan></text>
     <g
        id="g4123-2"
-       transform="translate(-119.46643,272.14005)"
+       transform="translate(10.609246,186.34546)"
        inkscape:export-filename="C:\Users\nuo.qin\Workspace\Current\TUI-2.0\Demo\logo.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
@@ -546,9 +546,9 @@
          id="text4112-6"
          y="564.26648"
          x="103.41211"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Microsoft YaHei';-inkscape-font-specification:'Microsoft YaHei';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Microsoft YaHei;-inkscape-font-specification:Microsoft YaHei"
          xml:space="preserve"><tspan
-           style="font-weight:bold;font-size:28px;-inkscape-font-specification:'Microsoft YaHei Bold';fill:#ffffff;fill-opacity:1"
+           style="font-size:28px;font-weight:bold;fill:#ffffff;fill-opacity:1;-inkscape-font-specification:Microsoft YaHei Bold"
            y="564.26648"
            x="103.41211"
            id="tspan4114-2"
@@ -574,9 +574,9 @@
          id="tspan4335">UI Framework</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:58.56328583px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="26.887758"
-       y="1155.1866"
+       style="font-size:58.56328583px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="303.72522"
+       y="870.05042"
        id="text4450-0"
        sodipodi:linespacing="125%"
        transform="scale(1.1363353,0.88002195)"
@@ -584,9 +584,9 @@
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan4452-1"
-         x="26.887758"
-         y="1155.1866"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.48574066px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';fill:#ffffff;fill-opacity:1">Tui.JS</tspan></text>
+         x="303.72522"
+         y="870.05042"
+         style="font-size:102.48574066px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Bauhaus 93;-inkscape-font-specification:'Bauhaus 93, '">Tui.JS</tspan></text>
     <g
        id="g4135"
        transform="matrix(0.70439231,-0.29390037,0.3126634,0.5848467,276.14438,925.11479)">
@@ -725,6 +725,88 @@
          id="path4597-3-2-5"
          d="m -291.3289,1373.0426 -35.5547,12.4726 -4.92,0.1387 c -20.5061,4.773 -39.6816,12.9336 -39.6816,12.9336 -1.5,1.8125 -0.8497,4.4765 -1.0265,3.8578 -1.5758,1.3428 -2.201,-0.1762 -6.687,0.5867 -4.2865,0.7289 -12.35735,4.5781 -10.1292,7.3928 3.59099,4.5363 10.92103,2.2441 17.29783,-0.068 1.7382,-0.6302 2.78467,-2.3318 3.16067,-2.8262 0.818,-1.0755 1.6603,-0.6343 1.6603,-0.6343 l 1.4845,0.7283 c 0,0 5.2057,1.181 7.8307,0.8685 0,0 23.9544,-7.0525 37.0998,-13.2241 0.9685,-0.7599 2.1917,-2.1056 2.1917,-2.1056 l 40.4842,-15.1776 c -2.2956,-5.6856 -13.2109,-4.9433 -13.2109,-4.9433 z"
          style="fill:#402b4e;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:58.35513687px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="21.894297"
+       y="1117.803"
+       id="text4450-0-1"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0993095,0.90966193)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\nuo.qin\Workspace\Current\tui-doc\src\main\webapp\assets\image\tuijs.png"><tspan
+         sodipodi:role="line"
+         id="tspan4452-1-7"
+         x="21.894297"
+         y="1117.803"
+         style="font-size:102.12148285px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Bauhaus 93;-inkscape-font-specification:'Bauhaus 93, '">TUI.JS</tspan></text>
+    <g
+       id="g4123-2-4"
+       transform="translate(-119.3343,273.74955)"
+       inkscape:export-filename="C:\Users\nuo.qin\Workspace\Current\TUI-2.0\Demo\logo.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="translate(-54,32.000003)"
+         id="g4031-8-9-0">
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 124,513.36218 0,2 4,0 0,-2 -4,0 z m 5,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 4,0 0,-2 -4,0 z m -17,3 0,2 4,0 0,-2 -4,0 z m 5,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 4,0 0,-2 -4,0 z m -9,3 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m -3,3 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m -3,3 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m -3,3 0,4 2,0 0,-4 -2,0 z m 3,0 0,4 2,0 0,-4 -2,0 z"
+           id="rect3924-5-6-9"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 118,507.36218 0,30 33,0 0,-30 -33,0 z m 1,1 31,0 0,28 -31,0 0,-28 z"
+           id="rect4025-7-7-4"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4112-6-8"
+         y="565.18903"
+         x="103.41211"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Microsoft YaHei;-inkscape-font-specification:Microsoft YaHei"
+         xml:space="preserve"><tspan
+           style="font-size:28px;font-weight:bold;fill:#ffffff;fill-opacity:1;-inkscape-font-specification:Microsoft YaHei Bold"
+           y="565.18903"
+           x="103.41211"
+           id="tspan4114-2-8"
+           sodipodi:role="line">TUI.JS</tspan></text>
+    </g>
+    <g
+       id="g4123-9"
+       transform="matrix(1.000125,0,0,1,244.50274,276)"
+       inkscape:export-filename="C:\Users\nuo.qin\Workspace\Current\tui-doc\src\main\webapp\assets\image\logo.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         transform="translate(-54,32.000003)"
+         id="g4031-8-2">
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 124,513.36218 0,2 4,0 0,-2 -4,0 z m 5,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 4,0 0,-2 -4,0 z m -17,3 0,2 4,0 0,-2 -4,0 z m 5,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 4,0 0,-2 -4,0 z m -9,3 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m -3,3 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m -3,3 0,2 2,0 0,-2 -2,0 z m 3,0 0,2 2,0 0,-2 -2,0 z m -3,3 0,4 2,0 0,-4 -2,0 z m 3,0 0,4 2,0 0,-4 -2,0 z"
+           id="rect3924-5-7"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 118,507.36218 0,30 33,0 0,-30 -33,0 z m 1,1 31,0 0,28 -31,0 0,-28 z"
+           id="rect4025-7-9"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4112-5"
+         y="564.26648"
+         x="103.41211"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Microsoft YaHei;-inkscape-font-specification:Microsoft YaHei"
+         xml:space="preserve"><tspan
+           style="font-size:28px;font-weight:bold;fill:#ffffff;fill-opacity:1;-inkscape-font-specification:Microsoft YaHei Bold"
+           y="564.26648"
+           x="103.41211"
+           id="tspan4114-4"
+           sodipodi:role="line">TUI.JS</tspan></text>
     </g>
   </g>
 </svg>
