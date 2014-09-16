@@ -8241,6 +8241,7 @@ var tui;
                     setTimeout(function () {
                         if (_this.text() !== _this._textbox.value) {
                             _this.text(_this._textbox.value);
+                            self.openSuggestion(self._textbox.value);
                             self.fire("change", { "ctrl": _this[0], "event": e, "text": _this.text() });
                         }
                     }, 0);
@@ -8248,6 +8249,7 @@ var tui;
                 $(this._textbox).on("change", function (e) {
                     if (_this.text() !== _this._textbox.value) {
                         _this.text(_this._textbox.value);
+                        self.openSuggestion(self._textbox.value);
                         _this.fire("change", { "ctrl": _this[0], "event": e, "text": _this.text() });
                     }
                 });
@@ -8255,16 +8257,17 @@ var tui;
                     setTimeout(function () {
                         if (_this.text() !== _this._textbox.value) {
                             _this.text(_this._textbox.value);
+                            self.openSuggestion(self._textbox.value);
                             self.fire("change", { "ctrl": self[0], "event": e, "text": self.text() });
                         }
                     }, 0);
                 });
                 $(this._textbox).keydown(function (e) {
-                    if (!tui.CONTROL_KEYS[e.keyCode]) {
-                        setTimeout(function () {
-                            self.openSuggestion(self._textbox.value);
-                        }, 0);
-                    }
+                    //if (!tui.CONTROL_KEYS[e.keyCode]) {
+                    //	setTimeout(function () {
+                    //		self.openSuggestion(self._textbox.value);
+                    //	}, 0);
+                    //}
                     if (self._suggestionList) {
                         var list = self._suggestionList;
                         if (e.keyCode === tui.KEY_DOWN) {
@@ -10812,4 +10815,3 @@ var tui;
     })(tui.ctrl || (tui.ctrl = {}));
     var ctrl = tui.ctrl;
 })(tui || (tui = {}));
-//# sourceMappingURL=tui.all.js.map
