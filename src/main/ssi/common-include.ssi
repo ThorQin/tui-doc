@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<%context%>/assets/script/font-awesome-4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<%context%>/assets/css/main.min.css" type="text/css" />
 <script src="<%context%>/assets/script/jquery-1.11.1.min.js"></script>
-<script src="<%context%>/assets/script/tui/tui.all.js"></script>
+<script src="<%context%>/assets/script/tui/tui.all.min.js"></script>
 <script src="<%context%>/assets/script/tui/lang/zh-cn.js"></script>
 <script src="<%context%>/assets/script/tui/lang/en-us.js"></script>
 <script src="<%context%>/assets/script/docmaker.js"></script>

@@ -6238,6 +6238,8 @@ var tui;
                     this._contentWidth = 0;
                     var cols = (columns.length < 1 ? 1 : columns.length);
                     var defaultWidth = Math.floor((innerWidth - this._borderWidth * cols) / cols);
+                    if (defaultWidth < 100)
+                        defaultWidth = 100;
                     for (var i = 0; i < columns.length; i++) {
                         this._contentWidth += Grid.colSize(columns[i].width, defaultWidth) + this._borderWidth;
                     }
