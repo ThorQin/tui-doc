@@ -4,7 +4,7 @@
   "content": [
     {
       "id": "firstProject",
-      "name": "创建 tui.js 工程",
+      "name": "创建工程",
       "desc": "tui.js 是一个独立的 Javascript UI 框架，使用 tui.js 只要简单的下载开发包并加入你的 web 工程即可，tui.js 一开始就是为了纯静态页面而设计的，不需要后台服务器开发也可以工作的很好，当然如果需要后台数据交互的话，那么无论何种服务器开发语言都可创建支撑 tui.js 的后端服务器。",
       "index": true,
       "content": [
@@ -32,7 +32,7 @@
         {
           "id": "createWebAPI",
           "name": "创建 WebAPI 工程",
-          "desc": "如果您是 java web 开发人员，那么想要使用 tui.js，最简单的是使用 WebAPI 框架来进行开发，WebAPI 是一个开源的轻量级的 java 服务器开发框架，内置集成了 tui.js 作为前端 UI 库，它的设计理念就是希望使用静态 HTML + 服务器API 来代替传统的 asp，jsp, php 页面的开发方式，由于传统的开发方式把服务器代码和客户端代码都写在一起，无论是理解和维护都比较困难，随着客户端 javascript 的增强和 HTML5的进步，未来的开发方式会更多的采用静态页面+服务器API的方式进行开发，这种方式由于减轻了服务器生成动态页面的负担，也使得服务器并发能力得到增强。",
+          "desc": "如果您是 java web 开发人员，那么想要使用 tui.js，最简单的是使用 WebAPI 框架来进行开发，WebAPI 是一个开源的轻量级的 java 服务器开发框架，内置集成了 tui.js 作为前端 UI 库，它的设计理念就是希望使用静态 HTML + 服务器API 来代替传统的 asp，jsp, php 页面的开发方式，由于传统的开发方式把服务器代码和客户端代码都写在一起，无论是理解和维护都比较困难，随着客户端 javascript 的增强和 HTML5的进步，未来的开发方式会更多的采用静态页面+服务器API的方式进行开发，这种方式由于减轻了服务器生成动态页面的负担，也使得服务器并发能力得到增强。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 访问 WebAPI 在 github 上的主页：\u003ca href\u003d\"https://github.com/thorqin/webapi-suit\"\u003ehttps://github.com/thorqin/webapi-suit\u003c/a\u003e",
           "index": true,
           "content": [
             {
@@ -74,7 +74,7 @@
         {
           "id": "buttons",
           "name": "按钮",
-          "desc": "Web 开发最常用的可能就是按钮控件了，仅仅使用风格统一而漂亮的按钮，就可以让网站的用户体验整体提高一个层次。tui.js 提供了默认的按钮风格，同时也可以通过定制 CSS 来控制按钮的外观，按钮控件提供了一系列的方法、属性、和事件来使得开发者更容易的使用它。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看按钮的外观：\u003cdiv style\u003d\"padding:10px\"\u003e\u003ca class\u003d\"tui-button\"\u003e按钮\u003c/a\u003e \u003ca class\u003d\"tui-button tui-primary\"\u003e重要\u003c/a\u003e \u003ca class\u003d\"tui-button tui-success\"\u003e成功\u003c/a\u003e \u003ca class\u003d\"tui-button tui-warning\"\u003e警告\u003c/a\u003e \u003ca class\u003d\"tui-button tui-danger\"\u003e危险\u003c/a\u003e \u003ca class\u003d\"tui-button\" data-disabled\u003d\"true\"\u003e禁用\u003c/a\u003e\u003c/div\u003e",
+          "desc": "Web 开发最常用的可能就是按钮控件了，仅仅使用风格统一而漂亮的按钮，就可以让网站的用户体验整体提高一个层次。tui.js 提供了默认的按钮风格，同时也可以通过定制 CSS 来控制按钮的外观，按钮控件提供了一系列的方法、属性、和事件来使得开发者更容易的使用它。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看按钮的外观：\u003cdiv style\u003d\"padding:10px\"\u003e\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-edit\"\u003e\u003c/i\u003e 按钮\u003c/a\u003e \u003ca class\u003d\"tui-button tui-primary\"\u003e重要\u003c/a\u003e \u003ca class\u003d\"tui-button tui-success\"\u003e成功\u003c/a\u003e \u003ca class\u003d\"tui-button tui-warning\"\u003e警告\u003c/a\u003e \u003ca class\u003d\"tui-button tui-danger\"\u003e危险\u003c/a\u003e \u003ca class\u003d\"tui-button\" data-disabled\u003d\"true\"\u003e禁用\u003c/a\u003e\u003c/div\u003e",
           "index": true,
           "content": [
             {
@@ -94,7 +94,7 @@
             {
               "id": "buttonMenu",
               "name": "按钮菜单",
-              "desc": "按钮还有一些高级特性，比如可以为按钮添加一个弹出菜单，这可能是非常常见的用法，弹出菜单支持两种形式，一个是菜单模式，一个是选项列表模式，所谓菜单模式就是弹出菜单只作为发起事件的来源使用，而选项列表模式可以通过列表的内容更新按钮的内容或别的控件的内容。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看，他们的外观：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e菜单模式：\n\u003ca class\u003d\"tui-button\" data-menu\u003d\"[{key:1, value:\u0027菜单项1\u0027},{key:2,value:\u0027菜单项2\u0027},{key:3, value:\u0027菜单项3\u0027}]\"\u003e按钮菜单\u003c/a\u003e 选项模式： \u003ca class\u003d\"tui-button\" data-value\u003d\"\u00271\u0027\" data-data\u003d\"[{key:\u00271\u0027,value:\u0027选项1\u0027},{key:\u00272\u0027,value:\u0027选项2\u0027},{key:\u00273\u0027,value:\u0027选项3\u0027}]\"\u003e选项1\u003c/a\u003e\n\u003c/div\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 对于选项模式，典型的使用场景可能是这样的：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e\u003cspan class\u003d\"tui-input-group tui-inline\"\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入注册资金\"\u003e\u003c/span\u003e\u003ca class\u003d\"tui-button\" data-data\u003d\"[{key:\u0027CNY\u0027,value:\u0027人民币\u0027},{key:\u0027USD\u0027,value:\u0027美元\u0027},{key:\u0027EUR\u0027,value:\u0027欧元\u0027}]\" data-value\u003d\"\u0027CNY\u0027\"\u003e人民币\u003c/a\u003e\u003c/span\u003e\u003c/div\u003e",
+              "desc": "按钮还有一些高级特性，比如可以为按钮添加一个弹出菜单，这可能是非常常见的用法，弹出菜单支持两种形式，一个是菜单模式，一个是选项列表模式，所谓菜单模式就是弹出菜单只作为发起事件的来源使用，而选项列表模式可以通过列表的内容更新按钮的内容或别的控件的内容。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看，他们的外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e菜单模式：\n\u003ca class\u003d\"tui-button\" data-menu\u003d\"[{key:1, value:\u0027菜单项1\u0027},{key:2,value:\u0027菜单项2\u0027},{key:3, value:\u0027菜单项3\u0027}]\"\u003e按钮菜单\u003c/a\u003e 选项模式： \u003ca class\u003d\"tui-button\" data-value\u003d\"\u00271\u0027\" data-data\u003d\"[{key:\u00271\u0027,value:\u0027选项1\u0027},{key:\u00272\u0027,value:\u0027选项2\u0027},{key:\u00273\u0027,value:\u0027选项3\u0027}]\"\u003e选项1\u003c/a\u003e\n\u003c/div\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 对于选项模式，典型的使用场景可能是这样的：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e\u003cspan class\u003d\"tui-input-group tui-inline\"\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入注册资金\"\u003e\u003c/span\u003e\u003ca class\u003d\"tui-button\" data-data\u003d\"[{key:\u0027CNY\u0027,value:\u0027人民币\u0027},{key:\u0027USD\u0027,value:\u0027美元\u0027},{key:\u0027EUR\u0027,value:\u0027欧元\u0027}]\" data-value\u003d\"\u0027CNY\u0027\"\u003e人民币\u003c/a\u003e\u003c/span\u003e\u003c/div\u003e",
               "index": false,
               "code": "// 菜单按钮\n\u003ca class\u003d\"tui-button\" data-menu\u003d\"[{key:1, value:\u0027菜单项1\u0027},{key:2,value:\u0027菜单项2\u0027},{key:3, value:\u0027菜单项3\u0027}]\"\u003e按钮菜单\u003c/a\u003e\n// 选项按钮\n\u003ca class\u003d\"tui-button\" data-value\u003d\"\u00271\u0027\" data-data\u003d\"[{key:\u00271\u0027,value:\u0027选项1\u0027},{key:\u00272\u0027,value:\u0027选项2\u0027},{key:\u00273\u0027,value:\u0027选项3\u0027}]\"\u003e选项1\u003c/a\u003e"
             },
@@ -104,6 +104,13 @@
               "desc": "页面上的按钮，最重要的就是捕获点击的事件并处理，tui.js 提供了两种捕获按钮事件的方式，一是绑定事件处理函数到按钮对象上，二是绑定全局事件处理函数。在 tui.js 中，所有控件都是继承自 tui.ctrl.Control 对象，而 Control 对象继承自 EventObject 对象，EventObject 对象，提供了一组方法用来捕获对象事件，我们一般使用 on 方法来捕获，off 方法来释放捕获，在前面用 Javascript 创建按钮的章节中我们已经演示了一个绑定到按钮本身的事件处理过程。on 方法接受两个参数，第一是事件名称，第二个是处理函数，事件名称可以是多个（用空格分开），事件处理函数接收一个对象参数，该参数封装了所有事件可用的信息。而绑定全局事件处理函数则更为简单，在 tui.js 中所有按钮、单选、复选等控件，只要自身存在 ID 属性，则都会在 click 的时候触发一个全局事件，事件的名称就是控件 ID，于是我们只要绑定该 ID 就可以捕获到对应控件的 click 事件了（更多的事件处理的详情请看手册），示例代码如下：",
               "code": "\u003ca id\u003d\"testBtn\" class\u003d\"tui-button\"\u003e按钮\u003c/a\u003e\n\u003cscript\u003e\n// 绑定一个全局事件，捕获 testBtn 的 click 事件\ntui.on(\"testBtn\", function(data){\n\ttui.msgbox(\"点击了按钮\");\n});\n\u003c/script\u003e",
               "index": false
+            },
+            {
+              "id": "buttonGroup",
+              "name": "按钮组",
+              "desc": "有时想要设计一个工具条，把若干按钮排成一排，这时可以在一个 div 上使用一个样式：tui-button-group，此时，在这个 div 里的所有按钮都会紧紧挨在一起，好像一个整体，严格来说，按钮组并不是一个控件，而仅仅是一个额外的样式而已，所以它没有对应的 javascript 对象。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看它的外观：\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-btn-group tui-inline\"\u003e\n\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-file-o\"\u003e\u003c/i\u003e\u003c/a\u003e\n\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-save\"\u003e\u003c/i\u003e\u003c/a\u003e\n\u003c/div\u003e\n\u003cdiv class\u003d\"tui-btn-group tui-inline\"\u003e\n\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-align-left\"\u003e\u003c/i\u003e\u003c/a\u003e\n\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-align-justify\"\u003e\u003c/i\u003e\u003c/a\u003e\n\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-align-right\"\u003e\u003c/i\u003e\u003c/a\u003e\n\u003c/div\u003e\n\u003cdiv class\u003d\"tui-btn-group tui-inline\"\u003e\n\u003ca class\u003d\"tui-button\"\u003e\u003ci class\u003d\"fa fa-font\"\u003e\u003c/i\u003e\u003c/a\u003e\n\u003ca class\u003d\"tui-button tui-dropdown\" data-menu-pos\u003d\"Rb\" data-menu\u003d\"[{key:1,value:\u0027斜体\u0027, icon:\u0027fa-italic\u0027},{key:2, value:\u0027粗体\u0027, icon:\u0027fa-bold\u0027},{key:3, value:\u0027下划线\u0027, icon:\u0027fa-underline\u0027}]\"\u003e\u003c/a\u003e\n\u003c/div\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "\u003cdiv class\u003d\"tui-btn-group tui-inline\"\u003e\n  \u003ca class\u003d\"tui-button\"\u003e按钮1\u003c/a\u003e\n  \u003ca class\u003d\"tui-button\"\u003e按钮2\u003c/a\u003e\n\u003c/div\u003e\n\u003cdiv class\u003d\"tui-btn-group tui-inline\"\u003e\n  \u003ca class\u003d\"tui-button\"\u003e按钮3\u003c/a\u003e\n  \u003ca class\u003d\"tui-button\"\u003e按钮4\u003c/a\u003e\n\u003c/div\u003e\n\u003c!--\n  按钮控件本身还提供了两个特殊的样式：tui-dropdown 和 tui-text-dropdown，把 tui-dropdown 样式附加到 tui-button 后再配合按钮菜单的使用，可以制作出上面字体按钮后面的下拉菜单样式。在后面输入框组的介绍中，还会使用到 tui-text-dropdown 样式。\n--\u003e"
             }
           ]
         },
@@ -129,7 +136,7 @@
             },
             {
               "id": "checkboxStyle",
-              "name": "定制单选框的显示风格",
+              "name": "自定义单选框的显示风格",
               "desc": "其实任何 tui.js 控件都是可以定制风格的，但由于单选框的用途很多，通过修改单选框的风格可以展示很多特殊的设计，我们举例来说明如何改变单选框的外观。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 首先看两个内置的风格：\u003cbr\u003e\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\"\u003e选框2\u003c/a\u003e\n\u003ca style\u003d\"margin-left:20px;\" class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\"\u003e选框2\u003c/a\u003e\n\u003c/div\u003e\n通过观察代码，我们可以看到，改变风格就是为控件添加额外的 CSS 样式，这样我们只要根据现有的样式定义，有针对的修改，覆盖掉不需要的属性，添加新的属性，就可以制作出不同的风格出来。这个原则适用于任何控件，注意一点，您设计的CSS类定义需要定义在 tui.min.css 的链接之后，这样才会让您的类定义拥有比 tui.js 自带的类定义拥有更高的优先权。",
               "index": false,
               "code": "\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-solid\" data-group\u003d\"g1\"\u003e选框2\u003c/a\u003e\n\u003ca style\u003d\"margin-left:20px;\" class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\" data-checked\u003d\"true\"\u003e选框1\u003c/a\u003e\n\u003ca class\u003d\"tui-radiobox tui-underline\" data-group\u003d\"g2\"\u003e选框2\u003c/a\u003e"
@@ -195,15 +202,291 @@
         {
           "id": "popup",
           "name": "弹出层和弹出菜单",
-          "desc": "弹出层和弹出菜单也是比较特殊的控件，它们同样无法直接使用标签来创建，而只能通过 javascript 来创建并控制使用，从设计上来说，弹出菜单是直接继承自弹出层的，区别是弹出菜单使用一组数据定义来设计其中的菜单项，而弹出层中可以放置任何内容，由于它们非常相似，这里我只演示弹出菜单。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看个使用的例子：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca id\u003d\"btnMenuDemo\" class\u003d\"tui-button\" data-menu\u003d\"[\n        {key:1, value:\u0027菜单项1\u0027},\n        {value:\u0027-\u0027},\n        {key:2, value:\u0027菜单项2\u0027, children: [\n          {key:11, value:\u0027子项1\u0027},\n          {value:\u0027-\u0027},\n          {key:22, value:\u0027子项2\u0027, checked:true},\n          {key:33, value:\u0027子项3\u0027, icon:\u0027fa-user\u0027}\n        ]},\n        {key:3, value:\u0027菜单项3\u0027}\n      ]\"\u003e弹出菜单\u003c/a\u003e\n\u003c/div\u003e\n好吧，我骗了你，这是一个按钮菜单，不过这是因为按钮天生集成了弹出菜单，所以我没必要再写一段脚本了。什么？你想要看到如何用脚本来生成菜单，好吧，我会给你提供一个代码范例的。",
+          "desc": "弹出层和弹出菜单也是比较特殊的控件，它们同样无法直接使用标签来创建，而只能通过 javascript 来创建并控制使用，从设计上来说，弹出菜单是直接继承自弹出层的，区别是弹出菜单使用一组数据定义来设计其中的菜单项，而弹出层中可以放置任何内容，由于它们非常相似，这里我只演示弹出菜单。\u003cbr\u003e\u003cbr\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看个使用的例子：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca id\u003d\"btnMenuDemo\" class\u003d\"tui-button tui-success\" data-menu\u003d\"[\n        {key:1, value:\u0027菜单项1\u0027},\n        {value:\u0027-\u0027},\n        {key:2, value:\u0027菜单项2\u0027, children: [\n          {key:11, value:\u0027子项1\u0027},\n          {value:\u0027-\u0027},\n          {key:22, value:\u0027子项2\u0027, checked:true},\n          {key:33, value:\u0027子项3\u0027, icon:\u0027fa-user\u0027}\n        ]},\n        {key:3, value:\u0027菜单项3\u0027}\n      ]\"\u003e弹出菜单\u003c/a\u003e\n\u003c/div\u003e\n好吧，这还是一个按钮菜单，不过这是因为按钮天生集成了弹出菜单，所以我没必要再写一段脚本了。可以看到菜单是可以拥有子菜单的，子菜单的层数没有限制，菜单可以对齐某个控件，也可以对齐指定的坐标，对于对齐控件来说，有很多种对齐方式，对齐方式的参数请看代码部分的介绍。另外对齐方式会由于菜单过于靠近屏幕边缘无法显示完整而自动反方向对齐。",
           "index": true,
           "content": [
             {
               "id": "createByJs",
               "name": "用脚本创建和弹出一个菜单",
-              "desc": "对 tui.js 来说脚本是一等公民，能用标签实现的东西，没道理用脚本不可以实现。即便是 tooltip 这种控件，没有提供用脚本创建的接口，但我们也可以通过脚本给目标控件增加 data-tooltip 属性，所以用脚本还是可以干所有的事情。菜单的内容，主要由 JSON 数据段的定义来决定，菜单要求传入一个数组，数组的每个元素都是一个对象，对象必须拥有 value 属性，而 key，icon, checked, link, children 等属性是可选的。key 表示元素的ID，在事件处理中，可以通过这个属性来判断点击的目标，checked 属性描述了这个菜单项是否是选中状态的，link 表示点击这个菜单会导致页面跳转到对应的地址，二children属性则描述了本菜单的子菜单数组，菜单可以一级一级嵌套，没有限制。value 属性如果为 \"-\" 则表示这是一个分隔符。下面来看代码：",
-              "code": "var menuData \u003d [\n  {key: 1, value: \"菜单项1\"},\n  {key: 2, value: \"菜单项2\"},\n  {value: \"-\"},\n  {key: 3, value: \"菜单项3\", children: [\n    {key: 4, value: \"子菜单项1\"},\n    {key: 5, value: \"子菜单项2\"}\n  ]}\n];\nvar m \u003d tui.ctrl.menu(menuData);\nm.show(\"somButtonId\");\n// or m.show(someButton);\n// or m.show(someButton, \"rB\");\n// Second parameter means popup alignment position",
+              "desc": "菜单的内容，主要由 JSON 数据段的定义来决定，菜单要求传入一个数组，数组的每个元素都是一个对象，对象必须拥有 value 属性，而 key，icon, checked, link, children 等属性是可选的。key 表示元素的ID，在事件处理中，可以通过这个属性来判断点击的目标，checked 属性描述了这个菜单项是否是选中状态的，link 表示点击这个菜单会导致页面跳转到对应的地址，而children属性则描述了本菜单的子菜单数组，菜单可以一级一级嵌套，没有限制。value 属性如果为 \"-\" 则表示这是一个分隔符。下面来看代码：",
+              "code": "var menuData \u003d [\n  {key: 1, value: \"菜单项1\"},\n  {key: 2, value: \"菜单项2\"},\n  {value: \"-\"},\n  {key: 3, value: \"菜单项3\", children: [\n    {key: 4, value: \"子菜单项1\"},\n    {key: 5, value: \"子菜单项2\"}\n  ]}\n];\nvar m \u003d tui.ctrl.menu(menuData);\nm.show(\"somButtonId\");\n// or m.show(someButton);\n// or m.show(someButton, \"rB\");\n// 第二个参数指明了菜单的对齐方式，是一个由两个字符组成的字符串\n// 其中第一个字符可选的值为：\"l\", \"L\", \"r\", \"R\",\n// 第二个字符可选的值为：\"t\", \"T\", \"b\", \"B\"\n// 含义：l 或 L 表示左，r 或 R 为右，t 或 T 为上，b 或 B 为下\n// 大写字母表示对齐，比如 L 为左对齐，T 为上对齐\n// 小写字母表示相邻，比如 b 表示菜单会紧挨在目标控件的下方",
               "index": false
+            }
+          ]
+        },
+        {
+          "id": "scrollbar",
+          "name": "滚动条",
+          "desc": "虽然滚动条控件一般是提供 tui.js 内部使用，它是其它控件的组成部分，但如果愿意也可以单独，或在创建扩展控件的时候使用它。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 先来看看它的外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n  \u003cspan id\u003d\"scrDemo\" style\u003d\"width:200px\" class\u003d\"tui-scrollbar\" data-direction\u003d\"horizontal\" data-total\u003d\"100\"\u003e\u003c/span\u003e\n\u003cbr\u003e\u003cbr\u003e\n\u003cdiv id\u003d\"scrollInfoDiv\"\u003evalue: 0\u003c/div\u003e\n\u003c/div\u003e\n\u003cscript\u003e\n$(function(){\n  tui.ctrl.scrollbar(\"scrDemo\").on(\"scroll\", function(data){\n    $(\"#scrollInfoDiv\").html(\"value: \" + data.value);\n  });\n});\n\u003c/script\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 如果你想看看上面例子的代码是如何写的，可以使用 \u003ca href\u003d\"editor\"\u003e文档编辑器\u003c/a\u003e 打开本文档，找到滚动条控件的描述来查看源代码。",
+          "index": true,
+          "content": [
+            {
+              "id": "createByJs",
+              "name": "通过HTML标签创建",
+              "index": false,
+              "code": "\u003cspan style\u003d\"width:200px\" class\u003d\"tui-scrollbar\" data-direction\u003d\"horizontal\" data-total\u003d\"100\"\u003e\u003c/span\u003e\n\u003c!-- data-direction\u003d\"vertical\" 则创建垂直滚动条 --\u003e"
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript创建",
+              "code": "var scrollbar \u003d tui.ctrl.scrollbar();\nscrollbar.direction(\"horizontal\");\nscrollbar.total(100);\nscrollbar.value(0);\ndocument.body.appendChildren(scrollbar[0]);\nscrollbar.refresh();",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "tab",
+          "name": "页签控件",
+          "desc": "页签控件常用来将较多的输入项或显示内容，分类为多个页面来显示，这样可以有效的节省屏幕空间，且内容分类后更便于查找。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看它的外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-tab\"\u003e\n  \u003ca\u003e页签1\u003c/a\u003e\n  \u003ca\u003e页签2\u003c/a\u003e\n  \u003ca\u003e页签3\u003c/a\u003e\n\u003c/div\u003e\n\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHtml",
+              "name": "通过HTML标签创建",
+              "index": false,
+              "desc": "可以看到这个代码很简单。",
+              "code": "\u003cdiv class\u003d\"tui-tab\"\u003e\n  \u003ca\u003e页签1\u003c/a\u003e\n  \u003ca\u003e页签2\u003c/a\u003e\n  \u003ca\u003e页签3\u003c/a\u003e\n\u003c/div\u003e"
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript创建",
+              "code": "var tab \u003d tui.ctrl.tab();\ntab.add(\"页签1\");\ntab.add(\"页签2\");\ndocument.body.appendChild(tab[0]);",
+              "index": false
+            },
+            {
+              "id": "bindPage",
+              "name": "关联内容页面",
+              "desc": "单独的标签页在使用的时候需要自己绑定事件来决定显示内容的切换。为了方便起见，也可以通过附加一些属性来控制显示的内容。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看个例子：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-panel\" style\u003d\"background:#eee;\"\u003e\n  \u003cdiv class\u003d\"tui-tab\"\u003e\n    \u003ca data-tab\u003d\"tabPage1\"\u003e页签1\u003c/a\u003e\n    \u003ca data-tab\u003d\"tabPage2\"\u003e页签2\u003c/a\u003e\n    \u003ca data-tab\u003d\"tabPage3\"\u003e页签3\u003c/a\u003e\n  \u003c/div\u003e\n  \u003cdiv id\u003d\"tabPage1\" style\u003d\"padding:20px;background:#fff;\"\u003e内容1\u003c/div\u003e\n  \u003cdiv id\u003d\"tabPage2\" style\u003d\"padding:20px;background:#fff;\" class\u003d\"tui-hidden\"\u003e内容2\u003c/div\u003e\n  \u003cdiv id\u003d\"tabPage3\" style\u003d\"padding:20px;background:#fff;\" class\u003d\"tui-hidden\"\u003e内容3\u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "\u003cdiv class\u003d\"tui-panel\" style\u003d\"background:#eee;\"\u003e\n  \u003cdiv class\u003d\"tui-tab\"\u003e\n    \u003ca data-tab\u003d\"tabPage1\"\u003e页签1\u003c/a\u003e\n    \u003ca data-tab\u003d\"tabPage2\"\u003e页签2\u003c/a\u003e\n    \u003ca data-tab\u003d\"tabPage3\"\u003e页签3\u003c/a\u003e\n  \u003c/div\u003e\n  \u003cdiv id\u003d\"tabPage1\" style\u003d\"padding:20px;background:#fff;\"\u003e内容1\u003c/div\u003e\n  \u003cdiv id\u003d\"tabPage2\" style\u003d\"padding:20px;background:#fff;\" class\u003d\"tui-hidden\"\u003e内容2\u003c/div\u003e\n  \u003cdiv id\u003d\"tabPage3\" style\u003d\"padding:20px;background:#fff;\" class\u003d\"tui-hidden\"\u003e内容3\u003c/div\u003e\n\u003c/div\u003e"
+            }
+          ]
+        },
+        {
+          "id": "input",
+          "name": "输入框",
+          "desc": "输入框是个功能比较多因为比较复杂的空间，输入框把所有单行输入行为都集中起来，支持的形式有，单行文本输入，密码输入，下拉选择，下拉多选，日期选择，文件上传，自定义选择和自定义文本输入。由于形式比较多，我们分别为每个输入形式进行单独介绍。",
+          "index": true,
+          "content": [
+            {
+              "id": "textbox",
+              "name": "文本输入框",
+              "desc": "文本输入是最简单也最常用的输入形式。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 我们来看看它的样式：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n  请输入内容：\u003cspan id\u003d\"ipt1\" class\u003d\"tui-input\" data-placeholder\u003d\"请输入数字\" data-validator\u003d\"{\u0027*any\u0027: \u0027不能为空\u0027,\u0027*number\u0027:\u0027只能输入数字\u0027}\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003cscript\u003e\n$(function(){\n  var ipt1 \u003d tui.ctrl.input(\"ipt1\");\n  tui.ctrl.input(\"ipt1\").on(\"change\", function(data){\n    ipt1.validate();\n  });\n});\n\u003c/script\u003e\n这里显示了一个文本输入控件，指定了占位提示文字，并指定了2个校验指令，使用代码的方式绑定了文本的 change 事件，使得在该事件发生的时候执行输入验证。其实，文本框的验证不一定非要在用户输入的时候进行，如果正在设计一个表单的话，那么在表单提交的时候会自动检查输入的正确性。（下一个版本会提供一个属性指明是否需要立即验证，这样就不用写代码了）",
+              "index": false,
+              "code": "请输入内容：\n\u003cspan id\u003d\"ipt1\" \n    class\u003d\"tui-input\" data-placeholder\u003d\"请输入数字\"\n    data-validator\u003d\"{\u0027*any\u0027: \u0027不能为空\u0027,\u0027*number\u0027:\u0027只能输入数字\u0027}\"\u003e\n\u003c/span\u003e"
+            },
+            {
+              "id": "suggestion",
+              "name": "文本框的建议功能",
+              "desc": "为文本输入框提供一组数据，就可以简单的让文本框具有输入感知和建议功能。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 我们来看看它的样式：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n直辖市：\u003cspan \n    class\u003d\"tui-input\" data-placeholder\u003d\"请输入城市名称\"\n    data-data\u003d\"[\n       {key:\u0027bj,beijing,peking\u0027, value:\u0027北京\u0027},\n       {key:\u0027shanghai\u0027, value:\u0027上海\u0027},\n       {key:\u0027tj,tianjin\u0027, value:\u0027天津\u0027},\n       {key:\u0027gz,guangzhou\u0027, value:\u0027广州\u0027},\n       {key:\u0027cq,chongqing\u0027, value:\u0027重庆\u0027}\n    ]\"\u003e\n\u003c/span\u003e\n\u003c/div\u003e\n在上面的文本框中输入中国直辖市，支持中文，全拼，简拼。参考下面的代码可以发现，为了让文本框具有输入建议功能，我们只需要给文本框的 data-data 属性设置一个数组即可，数组中的元素要求是个对象，并最少具有 value 属性，value 就是显示的文字，而 key 属性是可选的，在输入匹配的时候，会检查 value 属性和 key 属性，只要部分匹配就会被选中，而如果是在 value 中被匹配，还会高亮匹配的部分。",
+              "index": false,
+              "code": "\u003cspan \n    class\u003d\"tui-input\" data-placeholder\u003d\"请输入城市名称\"\n    data-data\u003d\"[\n       {key:\u0027bj,beijing,peking\u0027, value:\u0027北京\u0027},\n       {key:\u0027shanghai\u0027, value:\u0027上海\u0027},\n       {key:\u0027tj,tianjin\u0027, value:\u0027天津\u0027},\n       {key:\u0027gz,guangzhou\u0027, value:\u0027广州\u0027},\n       {key:\u0027cq,chongqing\u0027, value:\u0027重庆\u0027}\n    ]\"\u003e\n\u003c/span\u003e"
+            },
+            {
+              "id": "password",
+              "name": "密码输入框",
+              "desc": "密码输入和普通的文本输入框没太大的区别，只是文本被隐藏起来。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n请输入密码：\u003cspan class\u003d\"tui-input\" data-type\u003d\"password\" data-placeholder\u003d\"请输入密码\"\u003e\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "请输入密码：\u003cspan class\u003d\"tui-input\" data-type\u003d\"password\" data-placeholder\u003d\"请输入密码\"\u003e\u003c/span\u003e"
+            },
+            {
+              "id": "datepicker",
+              "name": "日期选择框",
+              "desc": "日期选择框把日历控件集成了近来，用来选择一个日期。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n请选择日期：\u003cspan class\u003d\"tui-input\" data-type\u003d\"calendar\" data-placeholder\u003d\"请选择日期\"\u003e\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "请选择日期：\u003cspan class\u003d\"tui-input\" data-type\u003d\"calendar\" data-placeholder\u003d\"请选择日期\"\u003e\u003c/span\u003e"
+            },
+            {
+              "id": "singleSelect",
+              "name": "单选框",
+              "desc": "单选框需要通过 data-data 属性来指定选择的数据来源。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n请选择一个分类：\u003cspan class\u003d\"tui-input\" \ndata-placeholder\u003d\"请选择一个分类\"\ndata-type\u003d\"select\" data-data\u003d\"[\n  {key:1, value:\u0027项目1\u0027},\n  {key:2, value:\u0027项目2\u0027, children:[\n     {key:3, value:\u0027子项目1\u0027},\n     {key:4, value:\u0027子项目2\u0027},\n     {key:5, value:\u0027子项目3\u0027}]},\n {key:6, value:\u0027项目3\u0027},\n {key:7, value:\u0027项目4\u0027},\n]\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n可以看到，选择框是支持树形结构的数据的。",
+              "index": false,
+              "code": "请选择一个分类：\u003cspan class\u003d\"tui-input\" data-type\u003d\"select\" data-data\u003d\"[\n  {key:1, value:\u0027项目1\u0027},\n  {key:2, value:\u0027项目2\u0027, children:[\n     {key:3, value:\u0027子项目1\u0027},\n     {key:4, value:\u0027子项目2\u0027},\n     {key:5, value:\u0027子项目3\u0027}]},\n {key:6, value:\u0027项目3\u0027},\n {key:7, value:\u0027项目4\u0027},\n]\"\u003e\u003c/span\u003e"
+            },
+            {
+              "id": "multiSelect",
+              "name": "多选框",
+              "desc": "多选框和单选框类似，只不过 data-data 中指定的数据集，需要明确标识出那些条目是可以被选择的（使用 checked 属性来决定）。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n请选择多个分类：\u003cspan class\u003d\"tui-input\" \ndata-placeholder\u003d\"请选择需要的分类\"\ndata-type\u003d\"multi-select\" data-data\u003d\"[\n  {key:1, value:\u0027项目1\u0027, checked:false},\n  {key:2, value:\u0027项目2\u0027, children:[\n     {key:3, value:\u0027子项目1\u0027, checked:false},\n     {key:4, value:\u0027子项目2\u0027, checked:false},\n     {key:5, value:\u0027子项目3\u0027, checked:false}]},\n {key:6, value:\u0027项目3\u0027, checked:false},\n {key:7, value:\u0027项目4\u0027, checked:false},\n]\"\u003e\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "请选择多个分类：\u003cspan class\u003d\"tui-input\" data-type\u003d\"multi-select\" data-data\u003d\"[\n  {key:1, value:\u0027项目1\u0027, checked:false},\n  {key:2, value:\u0027项目2\u0027, children:[\n     {key:3, value:\u0027子项目1\u0027, checked:false},\n     {key:4, value:\u0027子项目2\u0027, checked:false},\n     {key:5, value:\u0027子项目3\u0027, checked:false}]},\n {key:6, value:\u0027项目3\u0027, checked:false},\n {key:7, value:\u0027项目4\u0027, checked:false},\n]\"\u003e\u003c/span\u003e"
+            },
+            {
+              "id": "fileUpload",
+              "name": "文件上传框",
+              "desc": "文件上传框，允许用户上传一个文件，这里需要注意的是，本控件需要后台代码支持，如果没有对应接受文件的后台服务器，则本控件不能工作。文件在被选择的同时就首先被提交到服务器了，此时服务器应该先保留一个临时的文件并返回文件ID给客户端，今后文件ID被随着其它信息通过表单一起提交给服务器的时候才会认为文件被提交，否则如果只是在这个提交框中选择了文件，不应该视为已上传。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n请选一个文件：\u003cspan class\u003d\"tui-input\" \ndata-placeholder\u003d\"请选择一个文件\"\ndata-type\u003d\"file\"  data-upload-url\u003d\"/api/upload\"\ndata-accept\u003d\"image/png,image/jpeg\"\u003e\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "请选一个文件：\u003cspan class\u003d\"tui-input\" \ndata-placeholder\u003d\"请选择一个文件\"\ndata-type\u003d\"file\"  data-upload-url\u003d\"/api/upload\"\ndata-accept\u003d\"image/png,image/jpeg\"\u003e\u003c/span\u003e\n\u003c!-- \n  这里 data-accept 表示接受的文件类型，可以使用通配符 * 来指定 MIME，也可以使用逗号来指定多个类型。\n  使用 data-upload-url 来指定接收文件的服务器地址。\n--\u003e"
+            },
+            {
+              "id": "customInput",
+              "name": "自定义输入框",
+              "desc": "定制输入框和普通输入框的区别是会在输入框右侧附加一个按钮，通过点击按钮可以定义一个自定义事件来决定执行某个动作。这个常被用来制作搜索框的效果。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cspan class\u003d\"tui-input\" data-type\u003d\"custom-text\" data-placeholder\u003d\"请输入查询内容\" data-icon\u003d\"fa fa-search\"\u003e\n\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "\u003cspan class\u003d\"tui-input\" data-type\u003d\"custom-text\" data-placeholder\u003d\"请输入查询内容\" data-icon\u003d\"fa fa-search\"\u003e\n\u003c/span\u003e"
+            },
+            {
+              "id": "customSelect",
+              "name": "自定义选择框",
+              "desc": "定制选择框在点击右侧选择按钮的时候会触发一个事件，供用户自己定义如何获取数据。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cspan class\u003d\"tui-input\" data-type\u003d\"custom-select\" data-placeholder\u003d\"请选择数据\" data-icon\u003d\"fa fa-pencil\"\u003e\n\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "\u003cspan class\u003d\"tui-input\" data-type\u003d\"custom-select\" data-placeholder\u003d\"请选择数据\" data-icon\u003d\"fa fa-pencil\"\u003e\n\u003c/span\u003e"
+            },
+            {
+              "id": "inputGroup",
+              "name": "输入框组",
+              "desc": "有时候为了美观想要把一些文字或按钮与输入框组合起来排成一排，这时使用输入框组样式就可以实现。和按钮组类似，输入框组也是一个样式：tui-input-group。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-input-group\"\u003e\n  \u003cspan class\u003d\"tui-label\"\u003e\u003ci class\u003d\"fa fa-envelope-o\"\u003e\u003c/i\u003e\u003c/span\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入登录账号\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003cdiv class\u003d\"tui-input-group\"\u003e\n  \u003cspan class\u003d\"tui-label\"\u003e\u003ci class\u003d\"fa fa-key\"\u003e\u003c/i\u003e\u003c/span\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入登录口令\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 或者：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cspan class\u003d\"tui-input-group tui-inline\"\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入注册资金\"\u003e\u003c/span\u003e\u003ca class\u003d\"tui-button\" data-data\u003d\"[{key:\u0027CNY\u0027,value:\u0027人民币\u0027},{key:\u0027USD\u0027,value:\u0027美元\u0027},{key:\u0027EUR\u0027,value:\u0027欧元\u0027}]\" data-value\u003d\"\u0027CNY\u0027\"\u003e人民币\u003c/a\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 或者干脆就是个传统的组合框（Combobox）：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cspan class\u003d\"tui-input-group\"\u003e\u003cspan id\u003d\"comboInput\" class\u003d\"tui-input\" data-placeholder\u003d\"请输入公司名称\"\u003e\u003c/span\u003e\u003ca class\u003d\"tui-button tui-text-dropdown\" data-menu-bind\u003d\"comboInput\" data-data\u003d\"[{key:\u0027北京市某公司\u0027,value:\u0027北京市某公司\u0027},{key:\u0027天津市某公司\u0027,value:\u0027天津市某公司\u0027},{key:\u0027某某公司\u0027,value:\u0027某某公司\u0027}]\" \u003e\u003c/a\u003e\u003c/span\u003e\n\u003c/div\u003e",
+              "index": false,
+              "code": "\u003cspan class\u003d\"tui-input-group\"\u003e\u003cspan id\u003d\"comboInput\" class\u003d\"tui-input\" data-placeholder\u003d\"请输入公司名称\"\u003e\u003c/span\u003e\u003ca class\u003d\"tui-button tui-text-dropdown\" data-menu-bind\u003d\"comboInput\" data-data\u003d\"[{key:\u0027北京市某公司\u0027,value:\u0027北京市某公司\u0027},{key:\u0027天津市某公司\u0027,value:\u0027天津市某公司\u0027},{key:\u0027某某公司\u0027,value:\u0027某某公司\u0027}]\" \u003e\u003c/a\u003e\u003c/span\u003e\n\u003c!--\n这里的代码只演示了组合框（Combobox）的使用，可以看到：通过指定按钮的 data-menu-bind 属性，可以利用按钮选项菜单的选择去变更其它控件的属性。\n--\u003e"
+            }
+          ]
+        },
+        {
+          "id": "textArea",
+          "name": "多行文本框",
+          "desc": "多行文本框和输入框不是同一个对象，因为形状不同，但它和单行文本框的一些方法比较近似，只不过没有建议列表，另外多了几个控制高度的属性。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看它的外观：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cspan class\u003d\"tui-textarea\" style\u003d\"width:400px\" data-placeholder\u003d\"请输入一段描述\"\u003e\u003c/span\u003e\n\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHTML",
+              "name": "通过HTML创建",
+              "code": "\u003cspan class\u003d\"tui-textarea\" style\u003d\"width:400px\" data-placeholder\u003d\"请输入一段描述\"\u003e\u003c/span\u003e\n\u003c!-- textarea 和 input 一样，也支持 validator --\u003e",
+              "index": false
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript创建",
+              "code": "var textarea \u003d tui.ctrl.textarea();\ntextarea.autoResize(false); // 不随内容增多而增高\ndocument.body.appendChild(textarea[0]);",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "table",
+          "name": "表格",
+          "desc": "网页中的表格出镜率非常高，尤其在企业应用中简直是必不可少的元素，普通的表格标签什么功能都没有，最大的问题，在于排版的时候，如果一个单元格中的内容过长，那么要么折行显示，把行撑高，要么就把列撑宽，这两种方案不是不可以，但总有点影响美观，tui.js 提供了另一种解决方案：为表格中的每个列提供一个列宽调整器，而文字超过长度则会截断并显示“...”。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 来看看表格的外观：\n\u003cdir style\u003d\"padding:10px\"\u003e\n\u003ctable class\u003d\"tui-table\" data-resizable\u003d\"true\" style\u003d\"width:500px;\"\u003e\n \u003ctr\u003e\u003cth\u003e用户账号\u003c/th\u003e\u003cth\u003e用户名称\u003c/th\u003e\u003cth\u003e所属群组\u003c/th\u003e\u003c/tr\u003e\n \u003ctr\u003e\u003ctd\u003exxxxxx@qq.com\u003c/td\u003e\u003ctd\u003e张三\u003c/td\u003e\u003ctd\u003e管理员组\u003c/td\u003e\u003c/tr\u003e\n \u003ctr\u003e\u003ctd\u003exxxxxx@gmail.com\u003c/td\u003e\u003ctd\u003e李四\u003c/td\u003e\u003ctd\u003e普通用户\u003c/td\u003e\u003c/tr\u003e\n \u003ctr\u003e\u003ctd\u003exxxxxx@hotmail.com\u003c/td\u003e\u003ctd\u003e王五\u003c/td\u003e\u003ctd\u003e普通用户\u003c/td\u003e\u003c/tr\u003e\n\u003c/table\u003e\n\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHtml",
+              "name": "通过HTML创建表格",
+              "index": false,
+              "desc": "观察下面的代码，可以发现，只是给普通的表格加上了一个样式：tui-table 就转换普通表格为 tui 表格了，data-resizable 属性控制了是否让表格具有列宽修改器。",
+              "code": "\u003ctable class\u003d\"tui-table\" data-resizable\u003d\"true\" style\u003d\"width:500px;\"\u003e\n \u003ctr\u003e\u003cth\u003e用户账号\u003c/th\u003e\u003cth\u003e用户名称\u003c/th\u003e\u003cth\u003e所属群组\u003c/th\u003e\u003c/tr\u003e\n \u003ctr\u003e\u003ctd\u003exxxxxx@qq.com\u003c/td\u003e\u003ctd\u003e张三\u003c/td\u003e\u003ctd\u003e管理员组\u003c/td\u003e\u003c/tr\u003e\n \u003ctr\u003e\u003ctd\u003exxxxxx@gmail.com\u003c/td\u003e\u003ctd\u003e李四\u003c/td\u003e\u003ctd\u003e普通用户\u003c/td\u003e\u003c/tr\u003e\n \u003ctr\u003e\u003ctd\u003exxxxxx@hotmail.com\u003c/td\u003e\u003ctd\u003e王五\u003c/td\u003e\u003ctd\u003e普通用户\u003c/td\u003e\u003c/tr\u003e\n\u003c/table\u003e"
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript创建",
+              "code": "var tb \u003d tui.ctrl.table();\ntb.columns(columDefine);\ntb.data(dataSet);\ndocument.appendChild(tb[0]);\ntb.refresh();\n",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "grid",
+          "name": "数据网格",
+          "desc": "数据网格是表格的另一种形式，它提供了更多的特性，比如具有垂直和水平滚动条，这样在数据很多的时候可以让用户在视线不变的情况下查看更多的内容，非常适合大数据的展示，使用普通表格如果显示过多的数据行的话，不但速度慢，而且操作不方便，表头会随着页面一起滚动而隐藏起来，不便于对照，网格就不会。网格还提供了大数据量加载，排序，行选择，自定义绘制以及行内编辑等特性。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 我们来看看它的样子：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-grid\" \n  data-columns\u003d\"[\n    { name: \u0027编号\u0027, sort:true, key:\u0027num\u0027 },\n    { name: \u0027姓名\u0027, sort: true, key: \u0027name\u0027 },\n    { name: \u0027年龄\u0027, sort: true, key: \u0027age\u0027 },\n    {\n      name: \u0027性别\u0027, sort: true, key: \u0027sex\u0027,\n      format: tui.ctrl.Grid.selector([\n        { key: 0, value: \u0027男\u0027 },\n        { key: 1, value: \u0027女\u0027 }\n      ])\n    }\n  ]\" \n  data-data\u003d\"{\n    head: [\u0027num\u0027, \u0027name\u0027, \u0027age\u0027, \u0027sex\u0027],\n    data: [\n      [1, \u0027赵一\u0027, 20, 0],\n      [2, \u0027钱二\u0027, 30, 0],\n      [3, \u0027孙三\u0027, 40, 1],\n      [4, \u0027李四\u0027, 15, 0],\n      [5, \u0027周五\u0027, 18, 1],\n      [6, \u0027吴六\u0027, 21, 0],\n      [7, \u0027郑七\u0027, 7, 1],\n      [8, \u0027王八 -_-!\u0027, 33, 0]\n    ]\n  }\" \n  data-resizable\u003d\"true\" \n  data-rowselectable\u003d\"true\"\n  style\u003d\"width:440px\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n数据网格使用了很多优化手段，使得加载并显示上百万条记录的数据也不会有问题（只要你的内存够大 ^_^），同时使用远程游标的话，那么数据集的大小将没有限制，所谓远程游标就是在用户滚动记录的时候实时到服务器去获取数据，后面会再仔细讲解它的使用办法。",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHTML",
+              "name": "通过HTML创建",
+              "desc": "数据网格的创建稍有点复杂，标签只有一个，但是其中要涉及到列的定义，以及数据集和的设置， 如果写在一起的话，是会显得有点长。",
+              "code": "\u003cdiv class\u003d\"tui-grid\" \n  data-columns\u003d\"[\n    { name: \u0027编号\u0027, sort:true, key:\u0027num\u0027 },\n    { name: \u0027姓名\u0027, sort: true, key: \u0027name\u0027 },\n    { name: \u0027年龄\u0027, sort: true, key: \u0027age\u0027 },\n    {\n      name: \u0027性别\u0027, sort: true, key: \u0027sex\u0027,\n      format: tui.ctrl.Grid.selector([\n        { key: 0, value: \u0027男\u0027 },\n        { key: 1, value: \u0027女\u0027 }\n      ])\n    }\n  ]\" \n  data-data\u003d\"{\n    head: [\u0027num\u0027, \u0027name\u0027, \u0027age\u0027, \u0027sex\u0027],\n    data: [\n      [1, \u0027赵一\u0027, 20, 0],\n      [2, \u0027钱二\u0027, 30, 0],\n      [3, \u0027孙三\u0027, 40, 1],\n      [4, \u0027李四\u0027, 15, 0],\n      [5, \u0027周五\u0027, 18, 1],\n      [6, \u0027吴六\u0027, 21, 0],\n      [7, \u0027郑七\u0027, 7, 1],\n      [8, \u0027王八 -_-!\u0027, 33, 0]\n    ]\n  }\" \n  data-resizable\u003d\"true\" \n  data-rowselectable\u003d\"true\"\n  style\u003d\"width:440px\"\u003e\u003c/div\u003e\n\n\u003c!-- \n实际上，我们可以把 data-columns 和 data-data 中的脚本写在 script 标签里，只要定义一个变量让网格能访问到就可以了，现在假如有个变量 columns 存储着列定义，有个变量 dataSet 存储着数据集合，那么上面的网格就可以写成：\n\n\u003cdiv class\u003d\"tui-grid\" data-columns\u003d\"columns\"  data-data\u003d\"dataSet\" data-resizable\u003d\"true\" data-rowselectable\u003d\"true\" style\u003d\"width:440px\"\u003e\u003c/div\u003e\n\n是不是简短多了？\n--\u003e",
+              "index": false
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript脚本创建",
+              "code": "var grid \u003d tui.ctrl.grid();\ndocument.appendChild(grid[0]);\ngrid.columns(columnsDefine);\ngrid.data(dataSet);",
+              "index": false
+            },
+            {
+              "id": "horizontalScrollbar",
+              "name": "水平滚动条",
+              "desc": "有时候数据列太多，使得水平方向无法在有限的屏幕内显示下全部数据，此时，水平滚动条就派上用场了。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 看个例子：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-grid\" data-columns\u003d\"[\n{ name: \u0027列1\u0027, key:0},\n{ name: \u0027列2\u0027, key:1},\n{ name: \u0027列3\u0027, key:2},\n{ name: \u0027列4\u0027, key:3},\n{ name: \u0027列5\u0027, key:4},\n{ name: \u0027列6\u0027, key:5},\n{ name: \u0027列7\u0027, key:6},\n{ name: \u0027列8\u0027, key:7},\n{ name: \u0027列9\u0027, key:8},\n{ name: \u0027列10\u0027, key:9},\n{ name: \u0027列11\u0027, key:10},\n{ name: \u0027列12\u0027, key:11},\n{ name: \u0027列13\u0027, key:12},\n{ name: \u0027列14\u0027, key:13},\n{ name: \u0027列15\u0027, key:14}\n]\" data-data\u003d\"[[\n\u0027数据内容1\u0027,\n\u0027数据内容2\u0027,\n\u0027数据内容3\u0027,\n\u0027数据内容4\u0027,\n\u0027数据内容5\u0027,\n\u0027数据内容6\u0027,\n\u0027数据内容7\u0027,\n\u0027数据内容8\u0027,\n\u0027数据内容9\u0027,\n\u0027数据内容10\u0027,\n\u0027数据内容11\u0027,\n\u0027数据内容12\u0027,\n\u0027数据内容13\u0027,\n\u0027数据内容14\u0027,\n\u0027数据内容15\u0027]]\" data-has-hscroll\u003d\"true\" data-resizable\u003d\"true\"\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n为表格开启水平滚动条，只需要添加属性： data-has-hscroll\u003d\"true\" 即可。",
+              "index": false
+            },
+            {
+              "id": "inlineEdit",
+              "name": "列定义和单元格编辑",
+              "desc": "在定义列的时候需要提供若干参数，可用的字段有：\n\u003cul\u003e\n\u003cli\u003e\u003cb\u003ename\u003c/b\u003e：列名称，显示在标题行上\u003c/li\u003e\n\u003cli\u003e\u003cb\u003ekey\u003c/b\u003e：列的数据字段名称，根据这个关键字在一行数据内找到单元格需要的字段值\u003c/li\u003e\n\u003cli\u003e\u003cb\u003ewidth\u003c/b\u003e：列的缺省宽度\u003c/li\u003e\n\u003cli\u003e\u003cb\u003efixed\u003c/b\u003e：决定列是否固定宽度，即便网格支持列宽修改器，如果设置了 fixed:true 那么该列也不允许改变宽度\u003c/li\u003e\n\u003cli\u003e\u003cb\u003esort\u003c/b\u003e：决定该列是否作为可排序列\u003c/li\u003e\n\u003cli\u003e\u003cb\u003ealign\u003c/b\u003e：决定该列内的单元格对齐方式(left,right,center)\u003c/li\u003e\n\u003cli\u003e\u003cb\u003eheadAlign\u003c/b\u003e：决定该列内的标题单元格对齐方式(left,right,center)\u003c/li\u003e\n\u003cli\u003e\u003cb\u003eformat\u003c/b\u003e：设置改列内单元格的绘制函数\u003c/li\u003e\n\u003c/ul\u003e\n单元格可编辑，其实是用到了列定义中的 format 参数，Grid 提供了几种预置的单元格绘制方法，可用的有：\n\u003cul\u003e\n\u003cli\u003e\u003cb\u003e缺省\u003c/b\u003e：不指定 format 参数，则原样显示数据原本的内容\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e文本框\u003c/b\u003e：format: tui.ctrl.Grid.textEditor(listData)，其中listData参数是提供建议列表的数组，不传则没有建议列表\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e按钮\u003c/b\u003e：format: tui.ctrl.Grid.button(text, func)，其中text是按钮显示名称，func 是按钮按下时触发的事件\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e菜单\u003c/b\u003e：format: tui.ctrl.Grid.menu(itemMenu, func)，其中itemMenu是菜单定义数组，或得到菜单数组的回调函数，func 是选择彩带时触发的事件\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e单选框\u003c/b\u003e：format: tui.ctrl.Grid.checkbox(withHeader)，其中withHeader表示是否在标题列也显示单选框\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e列表框\u003c/b\u003e：format: tui.ctrl.Grid.selector(listData)，其中listData是列表数据集合\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e文件选择框\u003c/b\u003e：format: tui.ctrl.Grid.fileSelector(address, accept)，其中address是上传文件的地址，accept是接受的文件类型\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e日期选择框\u003c/b\u003e：format: tui.ctrl.Grid.calendarSelector()\u003c/li\u003e\n\u003cli\u003e\u003cb\u003e自定义选择框\u003c/b\u003e：format: tui.ctrl.Grid.customSelector(func)，其中 func 是点击选择按钮后出发的事件处理函数\u003c/li\u003e\n\u003c/ul\u003e\n在开始的表格例子中，最后一列就使用了一个 selector 编辑器。",
+              "index": false
+            },
+            {
+              "id": "dataSet",
+              "name": "数据集",
+              "desc": "其实不光是数据网格，包括表格，列表，选择框，菜单等等的tui控件，都使用统一的数据集定义：IDataProvider 接口，之前看我们传递给各个控件的数据集都是数组，其实tui内部会把这些数组统一转换成 ArrayProvider，然后传递给控件，IDataProvider 定义了若干方法用来访问集合数据，只要实现了这些方法，您也可以实现自己的数据集合对象。\u003cbr\u003e\u003cbr\u003etui 内置了两种数据集合：ArrayProvider 和 RemoteCursorProvider 它们都实现了 IDataProvider 接口。理论上来说任何实现了 IDataProvider 接口的对象都可以被所有需要数据的控件所使用，但是请注意，因为某些特殊原因，有些控件只支持 ArrayProvider。\u003cbr\u003e\u003cbr\u003e我们来说说 ArrayProvider，由于基于数组的使用是最常见的为列表、表格提供数据的方式，所以 ArrayProvider 是最为基本的数据集合封装方式，ArrayProvider 的构造函数接受两种类型的数据：原生数组和实现 IQueryResult 接口的对象，原生数组很好理解，数组的每个元素必须是一个对象或是数组（形成二维数组），如果是对象，那么访问列的时候就需要用字段名来索引，如果是数组，则使用下表来索引。IQueryResult 接口，需要三个属性：length，head 和 data，其中 length 表示记录集的长度，head 表示标题行，里面存储了列名，data 则是原生数组，这里的 data 中的元素也必须是数组，也就是说 data 只能是个二维数组。IQueryResult 常用来表示服务器端返回的记录集查询，采用二维数组加列标题的方式，会比直接返回对象数组更节省空间。",
+              "code": "// 这是一个原生二维数组\nvar array \u003d [\n    [1, \"张三\", 30],\n    [2, \"李四\", 28]\n];\n\n// 这是一个原生对象数组\nvar array1 \u003d [\n    {id:1, name:\"张三\", age: 30},\n    {id:2, name:\"李四\", age: 28},\n];\n\n// 这是一个 IQueryResult\nvar result \u003d {\n    length: 2,\n    head: [\"id\", \"name\", \"age\"],\n    data: [\n        [1, \"张三\", 30],\n        [2, \"李四\", 28]\n    ]\n};\n\n// 可以看到原生二维数组最节省空间，但是缺少列名，只能用顺序索引来访问，IQueryResult 在二维数组的基础上，增加了列名，使得在数据量很大的情况下可以有效的节省了空间。\n// 上面这三种写法，都可以直接转换成 ArrayProvider，也可以直接传递给表格、列表、选择框等控件，控件自动会转换成 ArrayProvider\n// 根据使用的控件不同，有些控件可能要求必须要有某些字段，但是从服务器拿回来的记录集列名不叫那个名字，这时候可以通过调用 IDataProvider 的 addKeyMap 方法，增加一个列映射来解决问题。",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "list",
+          "name": "列表框",
+          "desc": "列表框采用聚合的方式包含了数据网格控件，也可以把列表框看成是一个裁剪并订制了样式的数据网格，内部机制可以参考数据网格控件，这里只讲一讲特殊的地方：列表控件默认只有一列，没有标题行，列定义已经内置了，不需要指定，列表需要的数据集需要至少包含一个 value 列（没有可以映射），如果用来选择，还应该包含 key 列，如果表示可以勾选，则应该包含 checked 列（不选 checked: false， 选中 checked: true），记录如果包含子集合，则需要有 children 列，children 的结构和普通的记录集相同，如果要展开含有子记录集的节点，则包含 expand: true，否则不会展开，基本就是这样了。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 下面来看看它的样式：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003cdiv class\u003d\"tui-list\" style\u003d\"width:200px\" data-data\u003d\"[\n {key:1, value:\u0027记录1\u0027},\n {key:2, value:\u0027记录2\u0027, checked:false, expand:true, children:[\n   {key:21, value:\u0027记录2-1\u0027, checked:false},\n   {key:22, value:\u0027记录2-2\u0027, checked:false},\n   {key:23, value:\u0027记录2-3\u0027, checked:false},\n   {key:24, value:\u0027记录2-4\u0027, checked:false}\n ]},\n {key:3, value:\u0027记录3\u0027},\n {key:4, value:\u0027记录4\u0027}\n]\"\u003e\u003c/div\u003e\n\u003c/div\u003e",
+          "index": true,
+          "content": [
+            {
+              "id": "createByHtml",
+              "name": "通过HTML创建",
+              "index": false,
+              "code": "\u003cdiv class\u003d\"tui-list\" style\u003d\"width:200px\" data-data\u003d\"[\n {key:1, value:\u0027记录1\u0027},\n {key:2, value:\u0027记录2\u0027, checked:false, expand:true, children:[\n   {key:21, value:\u0027记录2-1\u0027, checked:false},\n   {key:22, value:\u0027记录2-2\u0027, checked:false},\n   {key:23, value:\u0027记录2-3\u0027, checked:false},\n   {key:24, value:\u0027记录2-4\u0027, checked:false}\n ]},\n {key:3, value:\u0027记录3\u0027},\n {key:4, value:\u0027记录4\u0027}\n]\"\u003e\u003c/div\u003e"
+            },
+            {
+              "id": "createByJs",
+              "name": "通过Javascript创建",
+              "code": "var list \u003d tui.ctrl.list();\ndocument.appendChild(list[0]);\nlist.data([\n {key:1, value:\u0027记录1\u0027},\n {key:2, value:\u0027记录2\u0027, checked:false, expand:true, children:[\n   {key:21, value:\u0027记录2-1\u0027, checked:false},\n   {key:22, value:\u0027记录2-2\u0027, checked:false},\n   {key:23, value:\u0027记录2-3\u0027, checked:false},\n   {key:24, value:\u0027记录2-4\u0027, checked:false}\n ]},\n {key:3, value:\u0027记录3\u0027},\n {key:4, value:\u0027记录4\u0027}\n]);",
+              "index": false
+            }
+          ]
+        },
+        {
+          "id": "dialog",
+          "name": "对话框",
+          "desc": "对话框是个重要的交互表现形式，一般来说在网页中最常用的是模式对话框，tui.js 提供了模式对话框的支持。使用对话框非常简单，如果是显示某种提示消息，基本就是一句 JS 语句就可以了。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 我们先来看看基本提示消息对话框：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca id\u003d\"btnMsgbox\" class\u003d\"tui-button\"\u003e消息\u003c/a\u003e\n\u003ca id\u003d\"btnInfobox\" class\u003d\"tui-button\"\u003e信息\u003c/a\u003e\n\u003ca id\u003d\"btnOkbox\" class\u003d\"tui-button\"\u003e成功\u003c/a\u003e\n\u003ca id\u003d\"btnErrbox\" class\u003d\"tui-button\"\u003e错误\u003c/a\u003e\n\u003ca id\u003d\"btnWarnbox\" class\u003d\"tui-button\"\u003e警告\u003c/a\u003e\n\u003ca id\u003d\"btnAskbox\" class\u003d\"tui-button\"\u003e询问\u003c/a\u003e\n\u003ca id\u003d\"btnWaitbox\" class\u003d\"tui-button\"\u003e等待\u003c/a\u003e\n\u003c/div\u003e\n\u003cscript\u003e\n$(function(){\ntui.ctrl.button(\"btnMsgbox\").on(\"click\", function(){\n  tui.msgbox(\"这是一个没有样式的消息提示。\");\n});\ntui.ctrl.button(\"btnInfobox\").on(\"click\", function(){\n  tui.infobox(\"这是一个通知消息提示。\");\n});\ntui.ctrl.button(\"btnOkbox\").on(\"click\", function(){\n  tui.okbox(\"恭喜，操作已成功！\");\n});\ntui.ctrl.button(\"btnErrbox\").on(\"click\", function(){\n  tui.errbox(\"操作失败，错误：XXX\");\n});\ntui.ctrl.button(\"btnWarnbox\").on(\"click\", function(){\n  tui.warnbox(\"警告，代码还没保存...\");\n});\ntui.ctrl.button(\"btnAskbox\").on(\"click\", function(){\n  tui.askbox(\"真的要删除该对象吗？\", null, function(result){\n    if (result)\n      tui.msgbox(\"用户确定\");\n    else\n      tui.msgbox(\"用户取消\");\n  });\n});\ntui.ctrl.button(\"btnWaitbox\").on(\"click\", function(){\n  var waitBox \u003d tui.waitbox(\"正在提交，请稍后...\");\n  setTimeout(function(){waitBox.close();}, 1000);\n});\n});\n\u003c/script\u003e",
+          "index": true,
+          "code": "// 下面是显示上面那几个对话框的语句\ntui.msgbox(\"这是一个没有样式的消息提示。\");\ntui.infobox(\"这是一个通知消息提示。\");\ntui.okbox(\"恭喜，操作已成功！\");\ntui.errbox(\"操作失败，错误：XXX\");\ntui.warnbox(\"警告，代码还没保存...\");\n\n// 询问对话框要针对用户不同的选择做出不同的动作...\ntui.askbox(\"真的要删除该对象吗？\", null/*这里是标题*/, \n    function(result){\n        if (result)\n            tui.msgbox(\"用户确定\");\n        else\n            tui.msgbox(\"用户取消\");\n    });\n\n// 等待对话框应该等待操作完成后自动关闭，这里让它1秒后关闭...\nvar waitBox \u003d tui.waitbox(\"正在提交，请稍后...\");\nsetTimeout(function(){waitBox.close();}, 1000);",
+          "content": [
+            {
+              "id": "dialogJs",
+              "name": "在 Javascript 中操作对话框",
+              "desc": "消息框实际上是对话框的简写，在 Javascript 中创建对话框实例使用如下语句：\u003cpre class\u003d\"tui-panel doc-code\"\u003e\nvar dlg \u003d tui.ctrl.dialog();\ndlg.showElement(elem, title, buttonArray);\n// Or showResource(resourceId, title, buttonArray);\n// Or showContent(content, title, buttonArray);\n...\ndlg.close(); // 关闭对话框\n\u003c/pre\u003e\n\u003cul\u003e\u003cli\u003eshowElement 方法会显示对话框，对话框的内容就是传入的 elem 元素，elem 可以是页面中的现有元素，也可以是刚刚创建出来还没有放入页面中的元素。\u003c/li\u003e\u003cli\u003eshowResource 是 showElement 的封装，showResource 会首先通过 resourceId 找到页面中的元素，然后调用 showElement，需要注意：通过 showResource 显示的页面元素，是把元素移动到对话框中，在对话框关闭的时候还会放回原位。\u003c/li\u003e\u003cli\u003eshowContent 方法，也是对 showElement 方法的封装，它会先把 content 参数转化为元素，然后调用 showElement。\u003c/li\u003e\u003c/ul\u003e",
+              "index": false,
+              "param": [
+                [
+                  "elem",
+                  "HTMLElement",
+                  "HTML元素，用来显示到对话框中"
+                ],
+                [
+                  "resourceId",
+                  "string",
+                  "HTML元素的ID，会把对象移动到对话框中，对话框关闭的时候还会放回原位"
+                ],
+                [
+                  "content",
+                  "string",
+                  "要显示的内容，可以是 HTML 源码"
+                ],
+                [
+                  "title",
+                  "string",
+                  "对话框的标题，可以是 HTML 源码（但由于是标题，尽量不要放置控件）"
+                ],
+                [
+                  "buttonArray",
+                  "object[]",
+                  "按钮定义的数组，按钮定义包括按钮文字（name），处理函数（func），附加样式（cls），ID（id），id和cls都是可选的，如：{name:\"确定\", func:function(){dlg.close();}} 就是一个按钮的条目，由这样的多个条目构成的数组就是 buttonArray"
+                ]
+              ]
+            },
+            {
+              "id": "customDialog",
+              "name": "自定义对话框",
+              "index": false,
+              "desc": "通过 showElement、showResource 和 showContent 都可以显示自定义的对话框，区别前面已经讲了，现在我们就调用 showContent 方法来展示一个自定义的表单对话框。\u003cbr\u003e\u003cbr\u003e\u003ci class\u003d\"fa fa-lightbulb-o\"\u003e\u003c/i\u003e 请看演示：\n\u003cdiv style\u003d\"padding:10px\"\u003e\n\u003ca id\u003d\"btnShowFormDlg\" class\u003d\"tui-button tui-primary\"\u003e添加一个用户\u003c/a\u003e\n\u003c/div\u003e\n\u003cdiv id\u003d\"demoLoginForm\" class\u003d\"tui-hidden\"\u003e\n\u003cdiv style\u003d\"padding:10px;\"\u003e\n\u003cdiv\u003e\n  \u003cspan class\u003d\"tui-label-white\"\u003e用户账号：\u003c/span\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入登录账号\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n  \u003cspan class\u003d\"tui-label-white\"\u003e用户全名：\u003c/span\u003e\u003cspan class\u003d\"tui-input\" data-placeholder\u003d\"请输入全名\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003cdiv\u003e\n  \u003cspan class\u003d\"tui-label-white\"\u003e所属群组：\u003c/span\u003e\u003cspan class\u003d\"tui-input\" data-type\u003d\"select\" data-placeholder\u003d\"请选择组\" data-data\u003d\"[{key:1,value:\u0027管理员组\u0027}, {key:2,value:\u0027用户组\u0027}, {key:3,value:\u0027访客组\u0027}]\"\u003e\u003c/span\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\u003cscript\u003e\n$(function(){\n  tui.ctrl.button(\"btnShowFormDlg\").on(\"click\", function(){\n    var dlg \u003d tui.ctrl.dialog();\n    var dlgContent \u003d document.getElementById(\"demoLoginForm\").innerHTML;\n    dlg.showContent(dlgContent, \"\u003ci class\u003d\u0027fa fa-user\u0027\u003e\u003c/i\u003e 添加用户\", [{name:\"确定\", cls:\"tui-primary\", func:function(){dlg.close();}}, {name:\"取消\", func:function(){dlg.close();}}]);\n  });\n});\n\u003c/script\u003e",
+              "code": "// 显示该对话框的代码：\n// 这里用了一个技巧，由于我们想要通过 showContent 来显示表单，而拼接 HTML 代码不太方便，所以最好的办法是在页面中先预定义一个表单，并隐藏它（可以使用 script 标签，并设置 type\u003d\"text/html\"，这样它天生就是隐藏的），在想要显示的时候，取出它的 innerHTML 内容进行显示。\n\nvar dlg \u003d tui.ctrl.dialog();\nvar dlgContent \u003d document.getElementById(\"demoLoginForm\").innerHTML;\ndlg.showContent(dlgContent, \n    \"\u003ci class\u003d\u0027fa fa-user\u0027\u003e\u003c/i\u003e 添加用户\", \n    [{name:\"确定\", cls:\"tui-primary\", func:function(){dlg.close();}}, \n    {name:\"取消\", func:function(){dlg.close();}}]);"
             }
           ]
         }
