@@ -539,23 +539,24 @@ var tui;
     tui.debugElementPosition = debugElementPosition;
 
     /**
-    * Obtain hosted document's window size
+    * Obtain hosted document's window size (exclude scrollbars if have)
+    * NOTE: this function will spend much CPU time to run,
+    * so you SHOULD NOT try to call this function repeatedly.
     */
     function windowSize() {
-        var w = 630, h = 460;
-        if (document.body && document.body.offsetWidth) {
-            w = document.body.offsetWidth;
-            h = document.body.offsetHeight;
-        }
-        if (document.compatMode === 'CSS1Compat' && document.documentElement && document.documentElement.offsetWidth) {
-            w = document.documentElement.offsetWidth;
-            h = document.documentElement.offsetHeight;
-        }
-        if (window.innerWidth && window.innerHeight) {
-            w = window.innerWidth;
-            h = window.innerHeight;
-        }
-        return { width: w, height: h };
+        var div = document.createElement("div");
+        div.style.display = "block";
+        div.style.position = "fixed";
+        div.style.left = "0";
+        div.style.top = "0";
+        div.style.right = "0";
+        div.style.bottom = "0";
+        div.style.visibility = "hidden";
+        var parent = document.body || document.documentElement;
+        parent.appendChild(div);
+        var size = { width: div.offsetWidth, height: div.offsetHeight };
+        parent.removeChild(div);
+        return size;
     }
     tui.windowSize = windowSize;
     ;
@@ -654,6 +655,16 @@ var tui;
         $(document).bind("keydown", ban);
     }
     tui.banBackspace = banBackspace;
+
+    function cancelDefault(event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+        }
+        return false;
+    }
+    tui.cancelDefault = cancelDefault;
 
     /**
     * Detect whether the given parent element is the real ancestry element
@@ -3194,16 +3205,12 @@ var tui;
                     return this.is("data-show-error");
             };
 
-            Form.prototype.isShowWait = function (val) {
-                if (typeof val !== tui.undef) {
-                    this.is("data-show-wait", !!val);
+            Form.prototype.waiting = function (msg) {
+                if (typeof msg === "string") {
+                    this.attr("data-waiting", msg);
                     return this;
-                } else {
-                    if (this.hasAttr("data-show-wait"))
-                        return this.is("data-show-wait");
-                    else
-                        return false;
-                }
+                } else
+                    return this.attr("data-waiting");
             };
 
             Form.prototype.action = function (url) {
@@ -3383,8 +3390,8 @@ var tui;
                     return;
                 var self = this;
                 var waitDlg = null;
-                if (this.isShowWait()) {
-                    waitDlg = tui.waitbox(tui.str("Loading..."));
+                if (this.waiting()) {
+                    waitDlg = tui.waitbox(tui.str(this.waiting()));
                 }
                 $.ajax({
                     "type": this.method(),
@@ -3415,17 +3422,19 @@ var tui;
                             var target = self.target();
                             var property = self.targetProperty();
                             if (target) {
+                                var respJson = /^\s*application\/json\s*(;.+)?/i.test(jqXHR.getResponseHeader("content-type"));
+                                var respVal = (respJson ? jqXHR["responseJSON"] : jqXHR.responseText);
                                 target = document.getElementById(target);
                                 if (target && target["_ctrl"]) {
                                     var ctrl = target["_ctrl"];
                                     if (typeof ctrl[property] === "function") {
-                                        ctrl[property](jqXHR["responseJSON"]);
+                                        ctrl[property](respVal);
                                     }
                                 } else if (target) {
                                     if (typeof target[property] === "function") {
-                                        target[property](jqXHR.responseText);
+                                        target[property](respVal);
                                     } else {
-                                        target[property] = jqXHR.responseText;
+                                        target[property] = respVal;
                                     }
                                 }
                             }
@@ -3435,6 +3444,10 @@ var tui;
                                 form && form.submit();
                             }
                         } else {
+                            if (typeof Form.defaultErrorProc === "function") {
+                                if (Form.defaultErrorProc({ jqXHR: jqXHR, status: status }) === false)
+                                    return;
+                            }
                             if (self.isShowError() && !(Form.ignoreErrors && Form.ignoreErrors.indexOf(jqXHR.status) >= 0)) {
                                 tui.errbox(tui.str(status) + " (" + jqXHR.status + ")", tui.str("Failed"));
                             }
@@ -3447,12 +3460,17 @@ var tui;
             Form.ignoreError = function (errorCodeList) {
                 Form.ignoreErrors = errorCodeList;
             };
+
+            Form.defaultError = function (proc) {
+                Form.defaultErrorProc = proc;
+            };
             Form.CLASS = "tui-form";
             Form.METHODS = ["GET", "POST", "PUT", "DELETE"];
             Form.STATUS = [
                 "success", "notmodified", "error", "timeout", "abort", "parsererror"
             ];
             Form.ignoreErrors = null;
+            Form.defaultErrorProc = null;
             return Form;
         })(_ctrl.Control);
         _ctrl.Form = Form;
@@ -4515,6 +4533,11 @@ var tui;
                 } else if (param && typeof param.x === "number" && typeof param.y === "number") {
                     elem = this.elem("div", Popup.CLASS);
                     this._position = param;
+                    this._bindType = "LT";
+                } else if (typeof param === tui.undef) {
+                    elem = this.elem("div", Popup.CLASS);
+                    this._position = { x: 0, y: 0 };
+                    this._bindType = "LT";
                 }
                 if (elem) {
                     if (this._bindElem) {
@@ -4606,8 +4629,8 @@ var tui;
                 if (!this[0])
                     return;
                 var elem = this[0];
-                var cw = document.documentElement.clientWidth;
-                var ch = document.documentElement.clientHeight;
+                var cw = tui.windowSize().width;
+                var ch = tui.windowSize().height;
                 var sw = elem.offsetWidth;
                 var sh = elem.offsetHeight;
                 var box = { x: 0, y: 0, w: 0, h: 0 };
@@ -7494,12 +7517,14 @@ var tui;
                 this[0] = this._grid[0];
                 this[0]._ctrl = this;
                 this.addClass(List.CLASS);
-                this._grid.noHead(true);
+
                 var columns = this._grid.columns();
                 if (columns === null) {
                     this._grid.columns([{
                             key: "value",
                             format: function (info) {
+                                if (info.rowIndex < 0)
+                                    return;
                                 var rowcheckable = _this.rowcheckable();
                                 var cell = info.cell.firstChild;
                                 var isExpanded = !!info.row[_this._expandColumnKey];
@@ -7631,6 +7656,8 @@ var tui;
                     }
                     return _this.fire("keyup", data);
                 });
+                if (!this.hasAttr("data-no-head"))
+                    this.noHead(true);
                 if (!this.hasAttr("data-delay-drawing"))
                     this.delayDrawing(false);
                 if (!this.hasAttr("data-rowselectable"))
@@ -7971,6 +7998,10 @@ var tui;
 
             List.prototype.delayDrawing = function (val) {
                 return this._grid.delayDrawing(val);
+            };
+
+            List.prototype.noHead = function (val) {
+                return this._grid.noHead(val);
             };
 
             List.prototype.hasHScroll = function (val) {
