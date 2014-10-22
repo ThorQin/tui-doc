@@ -1,4 +1,4 @@
-var __extends = this.__extends || function (d, b) {
+﻿var __extends = this.__extends || function (d, b) {
 	for (var p in b)
 		if (b.hasOwnProperty(p))
 			d[p] = b[p];
@@ -434,6 +434,7 @@ var doc;
 				for (var i = 0; i < catalog.length; i++) {
 					var acc = tui.ctrl.accordion();
 					acc.caption(catalog[i].value);
+					acc.consumeMouseWheelEvent(true);
 					if (i === 0)
 						acc.expanded(true);
 					acc.group(this._catalog.id());
