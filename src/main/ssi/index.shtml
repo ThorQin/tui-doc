@@ -147,8 +147,8 @@
 				 src="assets/image/logo.png" />
 		</a>
 		<a id="btnHome" class="tui-radiobox" data-checked="true" href="#" data-group="navGroup" ><i class="fa fa-home"></i> 首页</a>
-		<a id="btnQuickStart" class="tui-radiobox" href="quickstart.shtml" data-group="navGroup">快速上手</a>
-		<a id="btnReference" class="tui-radiobox" href="reference.shtml" data-group="navGroup">开发手册</a>
+		<a id="btnQuickStart" class="tui-radiobox" href="quickstart.html" data-group="navGroup">快速上手</a>
+		<a id="btnReference" class="tui-radiobox" href="reference.html" data-group="navGroup">开发手册</a>
 		<a class="tui-button" data-menu="downloadMenu"><i class="fa fa-download"></i> 下载</a>
 		<div id="forkme"><a href="https://github.com/ThorQin/tui">View On GitHub</a> <i class="fa fa-github" style="font-size:20px"></i></div>
 	</div>
@@ -171,7 +171,7 @@
 					为了方便页面设计，TUI 尽量保证一个控件只使用一个标签，
 					避免了记忆大量标签组合带来的烦恼，同时也可以节省大量 html 代码。
 					总之 TUI 更适合有大量数据交互的界面，如企业ERP应用等场合。<br/><br/>
-					<a href="quickstart.shtml">开始使用吧 <i class="fa fa-angle-double-right"></i></a>
+					<a href="quickstart.html">开始使用吧 <i class="fa fa-angle-double-right"></i></a>
 				</td>
 			</tr>
 			<tr>
