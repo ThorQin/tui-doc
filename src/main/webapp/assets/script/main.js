@@ -1,6 +1,6 @@
 ﻿var downloadMenu = [
-	{ link: 'https://github.com/ThorQin/tui/archive/v1.0.8.zip', value: '下载工程源码' },
-	{ link: 'https://github.com/ThorQin/tui/releases/download/v1.0.8/tui-1.0.8.zip', value: '下载开发包', icon:'fa-download' }];
+	{ link: 'https://github.com/ThorQin/tui/archive/v1.0.9.zip', value: '下载工程源码' },
+	{ link: 'https://github.com/ThorQin/tui/releases/download/v1.0.9/tui-1.0.9.zip', value: '下载开发包', icon:'fa-download' }];
 
 var detailItemMenu = [
 	{ key: "moveUp", value: "上移" ,icon:"fa-arrow-up"},
