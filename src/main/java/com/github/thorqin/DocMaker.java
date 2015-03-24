@@ -77,4 +77,36 @@ public class DocMaker {
 		} else
 			throw new HttpException(400);
 	}
+	
+	public static class VersionInfo {
+		@ValidateString
+		public String password;
+		@ValidateString
+		public String version;
+	}
+	
+	@WebEntry(method={GET}, name="version")
+	void setVersion(@Entity(source=QUERY_STRING) @Validate VersionInfo version) throws IOException, URISyntaxException {
+		File pwdConfig = application.getValidConfigFile("password.json");
+		String password = Serializer.loadJsonFile(pwdConfig, String.class);
+		if (version.password.equals(password)) {
+			String path = application.getDataPath("version.json");
+			Serializer.saveJsonFile(version.version, path, true);
+		} else
+			throw new HttpException(401, "Invalid Password!");
+	}
+	
+	@WebEntry(method={GET})
+	void downloadRelease(HttpServletResponse response) {
+		File versionFile = application.getValidConfigFile("version.json");
+		String version = Serializer.loadJsonFile(versionFile, String.class);
+		response.sendRedirect("https://github.com/ThorQin/tui/releases/download/v" + version + "/tui-" + version + ".zip");
+	}
+	
+	@WebEntry(method={GET})
+	void downloadSrc(HttpServletResponse response) {
+		File versionFile = application.getValidConfigFile("version.json");
+		String version = Serializer.loadJsonFile(versionFile, String.class);
+		response.sendRedirect("https://github.com/ThorQin/tui/archive/v" + version + ".zip");
+	}
 }
