@@ -97,14 +97,14 @@ public class DocMaker {
 	}
 	
 	@WebEntry(method={GET})
-	void downloadRelease(HttpServletResponse response) {
+	void downloadRelease(HttpServletResponse response) throws IOException, URISyntaxException {
 		File versionFile = application.getValidConfigFile("version.json");
 		String version = Serializer.loadJsonFile(versionFile, String.class);
 		response.sendRedirect("https://github.com/ThorQin/tui/releases/download/v" + version + "/tui-" + version + ".zip");
 	}
 	
 	@WebEntry(method={GET})
-	void downloadSrc(HttpServletResponse response) {
+	void downloadSrc(HttpServletResponse response) throws IOException, URISyntaxException {
 		File versionFile = application.getValidConfigFile("version.json");
 		String version = Serializer.loadJsonFile(versionFile, String.class);
 		response.sendRedirect("https://github.com/ThorQin/tui/archive/v" + version + ".zip");
